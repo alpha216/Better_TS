@@ -1,0 +1,363 @@
+
+ Window$: ƒ (a,b)$e: ƒ $e(id)AS: {
+    openCourseBrowser: ƒ
+ }
+ AutoSuggest: {
+    target: '#code_number', showResults: 20, script: 'api/courses/suggestions', accessibility: false, onselect: ƒ, …
+ }
+ BB: BState {
+    access: false, lang: 'en', tip: 5, page: 'results', scratch: false, …
+ }
+ BState: ƒ BState(str)BUBBLES: {
+    skipCampusStep: ƒ, update: ƒ, hideEducationPlanBubble: ƒ
+ }
+ BusyBlock: ƒ BusyBlock(d1,d2,day,hourStart,hourEnd)CA: {
+    assignColors: ƒ
+ }
+ CC: {
+    strToSet: ƒ, setToStr: ƒ, paramOfStr: ƒ
+ }
+ CP: {
+    usages: {
+    …
+ }
+ , loadData: ƒ, showPopup: ƒ, toggle: ƒ, remove: ƒ, …
+ }
+ Class: ƒ Class(cEl,cnTimeBlocks)CodeNumber: ƒ CodeNumber(cnEl,cnTimeBlocks,term)CodeNumberFilter: ƒ CodeNumberFilter(cnKey,drop,reqId,sa,ca,cs,cpn,csn,ignore,lock,lockdrop,isrec,enr,cart,waiting,seq,baggage,cr,auth,audited,waitPos)CodeNumberPro: ƒ CodeNumberPro(cn,cnf)CombinedDescription: ƒ CombinedDescription()Course2: ƒ Course2(cEl)DRAGGING: {
+    dragInit: ƒ
+ }
+ DWA: {
+    loadAudits: ƒ, loadAuditHtml: ƒ, loadAudit: ƒ, getGoal: ƒ, showPopup2: ƒ, …
+ }
+ EE: {
+    activeStateChangeListeners: Array(0), pauseResults: false, isSelectable: ƒ, isShow: ƒ, dispRecsForTerm: ƒ, …
+ }
+ ENGINE: {
+    doSearch: ƒ, generateResults: ƒ, computeOverlap: ƒ, sortAndFilterResults: ƒ
+ }
+ ET: {
+    divClicked: ƒ, editableTextBlurred: ƒ, init: ƒ
+ }
+ Filters: ƒ Filters(str)GG: {
+    blockedTerms: {
+    …
+ }
+ , noSelectCourseTerms: {
+    …
+ }
+ , trmAc: {
+    …
+ }
+ , isActiveTermBlocked: ƒ, isActiveTermNoSelect: ƒ, …
+ }
+ GState: ƒ GState(str)Legend: ƒ Legend(legendDest)MENU: {
+    menuFunction: ƒ, initMenu: ƒ
+ }
+ MM: {
+    codeNumbers: Array(6), colleges: Array(0), campuses: {
+    …
+ }
+ , terms: {
+    …
+ }
+ , sessions: {
+    …
+ }
+ , …
+ }
+ MR: {
+    getCurrentRec: ƒ, clearImportStatus: ƒ, toggleImportStatus: ƒ, initRecManager: ƒ, didChange: ƒ, …
+ }
+ MaterialButton: ƒ MaterialButton(element)MaterialCheckbox: ƒ MaterialCheckbox(element)MaterialDataTable: ƒ MaterialDataTable(element)MaterialIconToggle: ƒ MaterialIconToggle(element)MaterialLayout: ƒ MaterialLayout(element)MaterialLayoutTab: ƒ MaterialLayoutTab(tab, tabs, panels, layout)MaterialMenu: ƒ MaterialMenu(element)MaterialProgress: ƒ MaterialProgress(element)MaterialRadio: ƒ MaterialRadio(element)MaterialRipple: ƒ MaterialRipple(element)MaterialSlider: ƒ MaterialSlider(element)MaterialSnackbar: ƒ MaterialSnackbar(element)MaterialSpinner: ƒ MaterialSpinner(element)MaterialSwitch: ƒ MaterialSwitch(element)MaterialTabs: ƒ MaterialTabs(element)MaterialTextfield: ƒ MaterialTextfield(element)MaterialTooltip: ƒ MaterialTooltip(element)MsiInstitution: ƒ MsiInstitution(value,text,invisible,term,institution)Multiselect: ƒ Multiselect(id,param,items,callback, linkClass)MultiselectItem: ƒ MultiselectItem(value,text,title,checked,onclick,obj1,obj2,show,invisible,term,institution)NONE_TEXT: "None"PAGES: {
+    isCriteriaOpen: ƒ, openFavorites: ƒ, safariSettle: ƒ, settleWindow: ƒ, settleRecommendationsList: ƒ, …
+ }
+ PL: {
+    initPlanImport: ƒ, doPlanImport: ƒ
+ }
+ QQ: {
+    initQueue: ƒ, importCourseQueue: ƒ, receiveMessage: ƒ, refreshQueueDisplay: ƒ
+ }
+ RML: {
+    currentList: Array(0), createRecommendationTags: Array(0), createRecommendationGroups: Array(0), isLoadingPage: false, pageSize: 25, …
+ }
+ RR: {
+    updateTooltips: ƒ, forceScreenReaderOutput: ƒ, toggleLegend: ƒ, showLegend: ƒ, addBadWarning: ƒ, …
+ }
+ Reasons: ƒ Reasons()ReqGroupLine: ƒ ReqGroupLine(rglEl)Requirement: ƒ Requirement(shells,needed,reqId)Result: ƒ Result(id,scores,selPros,poss)ResultSet: ƒ ResultSet(results,allToDrop)SLIDER: {
+    tipContents: Array(25), renderSlider: ƒ, showNewTip: ƒ, sliderChange: ƒ, goTo: ƒ, …
+ }
+ Schedule: ƒ Schedule(scheduleDest,isDateGrid,isPersonal,isDragging,isFirstHalf,isPinning)Selection2: ƒ Selection2(selEl,cn,usel,cnTimeBlocks)SelectionPro: ƒ SelectionPro(sel,uselPro,cn)Shell: ƒ Shell(cnf,includes)TimeBlock: ƒ TimeBlock(id,day,t1,t2,d1,d2,s,xm,ot,type)Timetable: ƒ Timetable($dest,firstDay,lastDay,firstHour,lastHour)Timezone: ƒ Timezone(id,offset,abbr,name,dstWarning)USelection2: ƒ USelection2(uselEl,cn,cnTimeBlocks)USelectionPro: ƒ USelectionPro(usel,cnf,cn)UU: {
+    campusLoadDone: true, inputParams: null, onLoadState: ƒ, caseF5: ƒ, caseAddCourses: ƒ, …
+ }
+ VsbTimer: ƒ VsbTimer(logoutTime,keepAlive,maxDataAge,forceAlive,checkLogout)YearMonthDay: ƒ YearMonthDay(e)addParity: ƒ addParity(str)addPin: ƒ addPin(event,cnfid,uselkey,addIt,pinid)advisee: nulladviseeId: ""adviseePidm: nulladvisorCanBypassTermBlock: falseadvisorCantAdviseSelf: falseadvisorsSeeHue: falsealert: ƒ alert()allowDualSchedule: falsealphanumSessionsSort: falsealtHRMS: "HRMS"alwaysShowWaitlist: trueanalyticsAccess: falseanalyticsFiltersIncludeCode: falseapplyCampusFilterChange: ƒ applyCampusFilterChange(force)assert: ƒ assert(test)atob: ƒ atob()authenticated: trueautoCompleteSize: 20autoSuggestSelCamsOnly: falseavoidChange: ƒ avoidChange(event)baseUri: ""blockTimeInterval: 60blockUserBasedOnAttribute: ""blockUserByGlobalHold: falseblur: ƒ blur()boldMultiSelectItems: ""bookstoreUri: ""breakOutOfIframe: falsebtoa: ƒ btoa()ca: {
+    name: 's_cores', description: 'Section-level', values: {
+    …
+ }
+
+ }
+ caches: CacheStorage {
+    
+
+ }
+ calendarEnd: 13calendarStart: 11cancelAnimationFrame: ƒ cancelAnimationFrame()cancelIdleCallback: ƒ cancelIdleCallback()cancelScheduleClick: ƒ cancelScheduleClick()captureEvents: ƒ captureEvents()cartValidation: falsecctr: 0changeAction: ƒ changeAction(src)chrome: {
+    loadTimes: ƒ, csi: ƒ
+ }
+ cleanCnKey: ƒ cleanCnKey(cnKey)clearInterval: ƒ clearInterval()clearSearch: ƒ clearSearch(saveTerm)clearTimeout: ƒ clearTimeout()clickPrint: ƒ clickPrint()clickRemoveFromCart: ƒ clickRemoveFromCart(selkey)clickRemoveFromEnrollment: ƒ clickRemoveFromEnrollment(selkey,noFct,yesFct)clientInformation: Navigator {
+    vendorSub: '', productSub: '20030107', vendor: 'Google Inc.', maxTouchPoints: 0, scheduling: Scheduling, …
+ }
+ close: ƒ close()closed: falsecnfid: 12componentHandler: {
+    upgradeDom: ƒ, upgradeElement: ƒ, upgradeElements: ƒ, upgradeAllRegistered: ƒ, registerUpgradedCallback: ƒ, …
+ }
+ conditionalAddDrop: falseconfirm: ƒ confirm()confirmAction: ƒ confirmAction()confirmActions: falseconsolelog: ƒ consolelog(str)convertTermsToParams: ƒ convertTermsToParams(terms)cookieStore: CookieStore {
+    onchange: null
+ }
+ countNonEnrolledEECredits: falsecountProperties: ƒ countProperties(obj)coursesLocked: ""coursesToHideFromSelect: ""coursesToIgnoreForHasEnrolled: ""creTotalInst: [{
+    …
+ }
+ ]createImageBitmap: ƒ createImageBitmap()credentialless: falsecrnHelpText: "true"crossOriginIsolated: falsecrypto: Crypto {
+    subtle: SubtleCrypto
+ }
+ csvImportInstitutions: ""custDoActionsPromissory: ƒ custDoActionsPromissory(complete)custEnrollUrl: ƒ custEnrollUrl(ids)custViewMyClassSchedule: ƒ custViewMyClassSchedule()custViewMyShoppingCart: ƒ custViewMyShoppingCart()customElements: CustomElementRegistry {
+    
+
+ }
+ dateFromISO8601: ƒ dateFromISO8601(isoDateString)datesOnTimetable: falsedeObfuscateId: ƒ deObfuscateId($el)deObfuscateMdl: ƒ deObfuscateMdl($el)debounce: ƒ (func, threshold, execAsap)deepEquals: ƒ deepEquals(x,y)defaultCams: "R_H_O_A_I_X_M_S_"defaultCamsPerTerm: {
+    null: 'R_H_O_A_I_X_M_S_'
+ }
+ defaultHideFullClasses: falsedefaultNoCollapse: falsedefaultRecShowType: "modified"defaultSchoolTermId: 0defaultSort: "none"desc: "Prerequisites: MATH 1610<span class='minimum_grade'> Minimum D</span> or MATH 1613<span class='minimum_grade'> Minimum D</span> or MATH 1617<span class='minimum_grade'> Minimum D</span> or MATH 1710<span class='minimum_grade'> Minimum D</span>"desc1: "Prerequisites: MATH 1610<span class='minimum_grade'> Minimum D</span> or MATH 1613<span class='minimum_grade'> Minimum D</span> or MATH 1617<span class='minimum_grade'> Minimum D</span> or MATH 1710<span class='minimum_grade'> Minimum D</span>"desc2: "Prerequisites: MATH 1610<span class='minimum_grade'> Minimum D</span> or MATH 1613<span class='minimum_grade'> Minimum D</span> or MATH 1617<span class='minimum_grade'> Minimum D</span> or MATH 1710<span class='minimum_grade'> Minimum D</span>"descReplacements: []devicePixelRatio: 1.7999999523162842disableAnalyticsSortFilters: falsedisableCart: truedisableEnroll: falsedisableHotkeys: falsedisablePsLogoutCheck: falsedisableRel12Parenthesis: falsedispCrnInsteadOfSection: falsedisplayCourseRegisterLink: falsedisplayLocationOption: falsedisplayStudentSectionAuthorization: falsedoActionsClick: ƒ doActionsClick(skipPromissory)doInitialCampusSelection: ƒ doInitialCampusSelection(gState)document: documentdocumentPictureInPicture: DocumentPictureInPicture {
+    window: null, onenter: null
+ }
+ dontCollapseSimilar: falsedrawThumbnail: ƒ drawThumbnail(timeblocks, div, overtext, name, borderWidth, borderColor)dualScheduleAlwaysIfMultiYear: falsedwAuditApiPullOnDemand: falsedwAuditInstitutions: ""dwSepApiPullOnDemand: falsedwSepInstitutions: ""enableCampusesBasedOnTermAndStudent: ƒ enableCampusesBasedOnTermAndStudent()enableCohort: falseenablePeriodDropdown: falseenforceMaxCohortness: falseenrollType: "real"enrollTypeWhenAdvising: "none"evalCourseRg: ƒ evalCourseRg(rgLines,allCids,allStrms)evalRgLines: ƒ evalRgLines(rgLines,isMetFct,data1,data2)event: PointerEvent {
+    isTrusted: true, pointerId: 1, width: 1, height: 1, pressure: 0, …
+ }
+ example: [{
+    …
+ }
+ ]extAttrToDisplay: ƒ extAttrToDisplay(key)extNotesInLegend: falseexternal: External {
+    
+
+ }
+ extraLinks: []fastHide: falsefeeReportButton: falsefence: nullfetch: ƒ fetch()fetchLater: ƒ fetchLater()fillOptions: ƒ fillOptions($cb)fillValidation: ƒ fillValidation()filterCampus: falsefilterCollege: falsefilterInstruct: falsefilterInstructSortReverse: falsefilterLocation: falsefilterOptions: ƒ filterOptions(options,gcams,cnKey)filterSession: falsefind: ƒ find()focus: ƒ focus()forceCartValidation: falseframeElement: nullframes: Window {
+    window: Window, self: Window, document: document, name: '', location: Location, …
+ }
+ fullFilter: truefullOnViewResults: falsefullPageSearch: falsefullPageWelcome: falsegclient_id: "447488977917-s5i2anhjqeu33j713df42v12tta13anh.apps.googleusercontent.com"generalizeSortHomeCampToCollege: falsegetCampusDesc: ƒ getCampusDesc(campus)getComputedStyle: ƒ getComputedStyle()getCookie: ƒ getCookie(cname)getCookies: ƒ getCookies(ending)getDateFromJsDate: ƒ getDateFromJsDate(date)getDateTimeFromJsDate: ƒ getDateTimeFromJsDate(date)getDay: ƒ getDay(e)getDay2: ƒ getDay2(e)getDescribeCampuses: ƒ getDescribeCampuses(cams,maxLength)getInstructionalMethodDesc: ƒ getInstructionalMethodDesc(im)getLocations: ƒ getLocations(locs)getMonth: ƒ getMonth(e)getMonth2: ƒ getMonth2(e)getNoResultsIdea: ƒ getNoResultsIdea(gState)getPosition: ƒ getPosition(e)getScheduleClick: ƒ getScheduleClick(validate,skipValidate)getScreenDetails: ƒ getScreenDetails()getSelection: ƒ getSelection()getSessions: ƒ getSessions(sessions)getTimeDisplayString: ƒ getTimeDisplayString(classes, examFormat, ds, isAddLoc)getTimezone: ƒ getTimezone()getUrlParam: ƒ getUrlParam(sParam)getUrlParameter: ƒ getUrlParameter(sParam,url)groupC1: {
+    type: 'Choice', plannedCourses: Array(2), groups: Array(1)
+ }
+ groupC2: {
+    type: 'Choice', plannedCourses: Array(2), groups: Array(0)
+ }
+ groupU1: {
+    type: 'Union', plannedCourses: Array(2), groups: Array(1)
+ }
+ groupU2: {
+    type: 'Union', plannedCourses: Array(2), groups: Array(0)
+ }
+ groupU3: {
+    type: 'Union', plannedCourses: Array(2), groups: Array(0)
+ }
+ gtimezone: "America/New_York"guestMode: falseguidanceOkSessions: ""hasEnrolledCourse: ƒ hasEnrolledCourse()hasPlans: falsehiddenInstructionalMethods: {
+    
+
+ }
+ hideAPUnits: falsehideAssReqInLegend: falsehideAttrsInCourse: falsehideAttrsInLegend: falsehideCapsEndDate: falsehideCapsNotNow: falsehideCapsStartDate: falsehideCnfCheckboxes: truehideCourseReqInCriteria: falsehideCourseToggleCheckbox: falsehideCoursesLogic: ""hideCrn: falsehideDisplayStringClassType: truehideDropOfHue: falsehideGuidance: falsehideManualPersonalTimes: falsehideOffCampusDefault: falsehideOpenEnrollmentDate: falsehideRecommendationDisplay: falsehideRepeatSecNo: falsehideReqInLegendIfAllSame: falsehideSelfConflicting: truehideTimetable: falsehideUncheckedClassNotes: falsehideWaitlistFromLegend: falsehistory: History {
+    length: 2, scrollRestoration: 'auto', state: {
+    …
+ }
+
+ }
+ holdWelcome: falsehost: "tigerschedule.auburn.edu"i8n: {
+    cancel: 'Cancel', dec: 'Dec', temporarilyClosed: '(Temporarily Closed)', noticeUnderMinCredits: 'Notice: This schedule contains {
+    
+
+ }
+  credits. Undergr…e students need {
+    
+
+ }
+  or more credits for full-time.', pinnedDownClass: 'You pinned-down a class that is ', …
+ }
+ ignoreCohortConflict: falseignoreTimeConflict: falseindexedDB: IDBFactory {
+    
+
+ }
+ individualClassStatus: falseinit: ƒ init()initCriteria: ƒ initCriteria()initMultiselectors: ƒ initMultiselectors()initSdlInput: ƒ initSdlInput($el)innerHeight: 2050innerWidth: 1844inspecificSeats: falseinstitution: ""isAdvising: falseisAdvisor: falseisAuthenticated: trueisAuthenticatedWithSso: trueisAuthentication: trueisConfigurator: falseisIE: ƒ isIE()isMobile: ƒ isMobile()isScheduler: falseisSecureContext: truejQuery: ƒ (a,b)jQuery11110031299041356357415: {
+    events: {
+    …
+ }
+ , toJSON: ƒ, handle: ƒ
+ }
+ largeDateGrid: falselastPiaCookies: {
+    
+
+ }
+ launchQueue: LaunchQueue {
+    
+
+ }
+ legend: Legend {
+    draw: ƒ, applyRadioToCrnList: ƒ, initToggleExtraSelections: ƒ
+ }
+ legendAttrBold: (6) ['ONLN', 'CMPS', 'F2FF', 'F2FR', 'ONLS', 'ONLA']legendAttrFirst: (6) ['ONLN', 'CMPS', 'F2FF', 'F2FR', 'ONLS', 'ONLA']legendAttrValDisp: truelegendOnByDefault: truelength: 0lenientEquals: ƒ lenientEquals(a,b)linkedCourseKeys: ƒ linkedCourseKeys(lc)loadFeedData: ƒ loadFeedData(studentype,cb)loadxmlToDiv: ƒ loadxmlToDiv(xmlurl,destDiv)locToName: ƒ locToName(loc)localRecs: []localStorage: Storage {
+    vsbuilder.gstate: 'access=0&lang=en&tip=5&page=results&scratch=0&advi…5_0=0&rq_5_0=&bg_5_0=0&cr_5_0=&ss_5_0=0&sbc_5_0=0', length: 1
+ }
+ location: Location {
+    ancestorOrigins: DOMStringList, href: 'https://tigerschedule.auburn.edu/vsb/criteria.jsp?…5_0=0&rq_5_0=&bg_5_0=0&cr_5_0=&ss_5_0=0&sbc_5_0=0', origin: 'https://tigerschedule.auburn.edu', protocol: 'https:', host: 'tigerschedule.auburn.edu', …
+ }
+ locationCategory: ""locationOnTimetable: falselocationbar: BarProp {
+    visible: true
+ }
+ locations: []lookupAcadCareer: ƒ lookupAcadCareer(ac)m1callbackGo: nullm3callbackGo: nullmatchMedia: ƒ matchMedia()matchSessionLessThanOrEqual: falsemaxFavorites: 9maxFullTimeCredits: 18maximizeSwap: falsemaximizeSwapInRows: ƒ maximizeSwapInRows()menubar: BarProp {
+    visible: true
+ }
+ minCampusSwitchTime: 60minDuration: 0minFullTimeCredits: 12minLengthOfCrn: 4minSeatsTakenPercToPromote: 0moveBy: ƒ moveBy()moveTo: ƒ moveTo()msExpandible: ƒ msExpandible(id,enabled)msRefresh: ƒ msRefresh(id)msSelect: ƒ msSelect(id,i,checked)mscams: (8) [MultiselectItem, MultiselectItem, MultiselectItem, MultiselectItem, MultiselectItem, MultiselectItem, MultiselectItem, MultiselectItem]mscols: [MultiselectItem]msi: {
+    value: 'CMP', text: 'Campus', title: '', checked: true, onclick: null, …
+ }
+ msinstruct: (6) [MultiselectItem, MultiselectItem, MultiselectItem, MultiselectItem, MultiselectItem, MultiselectItem]msinstructForTerm: (3) [{
+    …
+ }
+ , {
+    …
+ }
+ , {
+    …
+ }
+ ]mslocs: []mssession: (14) [MultiselectItem, MultiselectItem, MultiselectItem, MultiselectItem, MultiselectItem, MultiselectItem, MultiselectItem, MultiselectItem, MultiselectItem, MultiselectItem, MultiselectItem, MultiselectItem, MultiselectItem, MultiselectItem]mssessionForTerm: []nWindow: ƒ nWindow()name: ""navigation: Navigation {
+    currentEntry: NavigationHistoryEntry, transition: null, activation: NavigationActivation, canGoBack: false, canGoForward: false, …
+ }
+ navigator: Navigator {
+    vendorSub: '', productSub: '20030107', vendor: 'Google Inc.', maxTouchPoints: 0, scheduling: Scheduling, …
+ }
+ neverShowFilterStep: truenewMsi: ƒ newMsi(value,text,invisible)noSelectCourseLogic: ""noSelectWhenGuest: falsenoSwapSupport: falsenotDroppedWarning: truenotYetEnrolledNotice: falsenoticePopupClose: ƒ ()oclient_id: "7f6eed1c-a826-4d4b-807a-f2107af92e31"offCampusFilter: falseoldAccess: falseonReservedFilter: falseonabort: nullonafterprint: nullonanimationend: nullonanimationiteration: nullonanimationstart: nullonappinstalled: nullonauxclick: nullonbeforeinput: nullonbeforeinstallprompt: nullonbeforematch: nullonbeforeprint: nullonbeforetoggle: nullonbeforeunload: nullonbeforexrselect: nullonblur: nulloncancel: nulloncanplay: nulloncanplaythrough: nullonchange: nullonclick: nullonclose: nulloncommand: nulloncontentvisibilityautostatechange: nulloncontextlost: nulloncontextmenu: nulloncontextrestored: nulloncuechange: nullondblclick: nullondevicemotion: nullondeviceorientation: nullondeviceorientationabsolute: nullondrag: nullondragend: nullondragenter: nullondragleave: nullondragover: nullondragstart: nullondrop: nullondurationchange: nulloneShotEnrollment: falseonemptied: nullonended: nullonerror: nullonfocus: nullonformdata: nullongotpointercapture: nullonhashchange: nulloninput: nulloninvalid: nullonkeydown: nullonkeypress: nullonkeyup: nullonlanguagechange: nullonlineClassCampusChangeWarning: falseonlineClassIcon: "far fa-mouse"onload: ƒ onload(event)onloadeddata: nullonloadedmetadata: nullonloadstart: nullonlostpointercapture: nullonlyRemainingSeats: trueonmessage: nullonmessageerror: nullonmousedown: nullonmouseenter: nullonmouseleave: nullonmousemove: nullonmouseout: nullonmouseover: nullonmouseup: nullonmousewheel: nullonoffline: nullononline: nullonpagehide: nullonpagereveal: nullonpageshow: nullonpageswap: nullonpause: nullonplay: nullonplaying: nullonpointercancel: nullonpointerdown: nullonpointerenter: nullonpointerleave: nullonpointermove: nullonpointerout: nullonpointerover: nullonpointerrawupdate: nullonpointerup: nullonpopstate: nullonprogress: nullonratechange: nullonrejectionhandled: nullonreset: nullonresize: ƒ ()onscroll: ƒ (e)onscrollend: nullonscrollsnapchange: nullonscrollsnapchanging: nullonsearch: nullonsecuritypolicyviolation: nullonseeked: nullonseeking: nullonselect: nullonselectionchange: nullonselectstart: nullonslotchange: nullonstalled: nullonstorage: nullonsubmit: nullonsuspend: nullontimeupdate: nullontoggle: nullontransitioncancel: nullontransitionend: nullontransitionrun: nullontransitionstart: nullonunhandledrejection: nullonunload: nullonvolumechange: nullonwaiting: nullonwebkitanimationend: nullonwebkitanimationiteration: nullonwebkitanimationstart: nullonwebkittransitionend: nullonwheel: nullopen: ƒ open()openFeeReportClick: ƒ openFeeReportClick(result)openNewTab: ƒ openNewTab(url)opener: nulloredirect: "http://localhost:8080/vsb/outlook.jsp"origin: "https://tigerschedule.auburn.edu"originAgentCluster: trueotimezone: "America/New_York"outerHeight: 1865outerWidth: 1680overlapWarning: falsepadForNext: ƒ padForNext(str)pageXOffset: 0pageYOffset: 0parent: Window {
+    window: Window, self: Window, document: document, name: '', location: Location, …
+ }
+ parseWildcard: ƒ parseWildcard(reqId)pauseResults: falseperformance: Performance {
+    timeOrigin: 1756173196995, onresourcetimingbufferfull: null, timing: PerformanceTiming, navigation: PerformanceNavigation, memory: MemoryInfo, …
+ }
+ permitInstantDrop: falsepersonalbar: BarProp {
+    visible: true
+ }
+ pollImportStatus: ƒ ()popupNotice: {
+    open: ƒ, close: ƒ
+ }
+ popupNoticeMap: {
+    #noticePopup: {
+    …
+ }
+ , #aarPopup: {
+    …
+ }
+
+ }
+ popupNotification: ƒ popupNotification(c)popupaar: ƒ popupaar()popupfilter: ƒ popupfilter()popupnotice: ƒ popupnotice()popupsort: ƒ popupsort()popuptips: ƒ popuptips()port: ""positiveWaitlistFillsClass: truepostMessage: ƒ postMessage()preload: ƒ preload(arrayOfImages)preopenCampusSelector: falseprepAttributes: ƒ prepAttributes(attrs)prepExtAttribute: ƒ prepExtAttribute(att,vals)prepRestrictionTitle: ƒ prepRestrictionTitle(att,desc)prepareFeeTable: ƒ prepareFeeTable(data)preventOutOfEnrollmentWindow: falsepreventTermIfNoActivation: falsepreviewSchedule: Schedule {
+    firstDay: 2, lastDay: 6, firstHour: 9, lastHour: 18, d1: -60, …
+ }
+ print: ƒ print()printFeeReport: ƒ printFeeReport()processRgs: ƒ processRgs(obj)prompt: ƒ prompt()protocol: "https"queryLocalFonts: ƒ queryLocalFonts()queueMicrotask: ƒ queueMicrotask()randomizeLegendSelection: falserec_data: {
+    id: 'R-1003', plan: {
+    …
+ }
+ , editor: 'Sam', groups: Array(1), compulsory: true, …
+ }
+ recommendKnownUserOnly: falserecommendScheduleEnabled: truerefreshOnUserStateChange: ƒ refreshOnUserStateChange()releaseEvents: ƒ releaseEvents()renderCodeNumberFilter2: ƒ renderCodeNumberFilter2(cnf,firstInReq,lastInReq,index,gcams)renderFavorites: ƒ renderFavorites(savedFlag=false)renderResult: ƒ renderResult()replaceUrlParam: ƒ replaceUrlParam(url, paramName, paramValue)reportError: ƒ reportError()requestAnimationFrame: ƒ requestAnimationFrame()requestIdleCallback: ƒ requestIdleCallback()requestScheduleCheckPromissory: ƒ requestScheduleCheckPromissory()resetCurrentResult: falseresizeBy: ƒ resizeBy()resizeTo: ƒ resizeTo()returnAfterEnroll: ƒ returnAfterEnroll()runEnrollUrl: ƒ runEnrollUrl(term,ids,postUrl)sameContents: ƒ sameContents(a1,a2)schedule: Schedule {
+    firstDay: 2, lastDay: 6, firstHour: 8, lastHour: 17, d1: 6440, …
+ }
+ schedule2: Schedule {
+    firstDay: 2, lastDay: 6, firstHour: 11, lastHour: 13, d1: null, …
+ }
+ scheduler: Scheduler {
+    
+
+ }
+ schoolTermIdsFromVisibleTerm: ƒ schoolTermIdsFromVisibleTerm(term)screen: Screen {
+    availWidth: 3360, availHeight: 1865, width: 3360, height: 1890, colorDepth: 24, …
+ }
+ screenLeft: -519screenTop: -1865screenX: -519screenY: -1865scroll: ƒ scroll()scrollBy: ƒ scrollBy()scrollTo: ƒ scrollTo()scrollX: 0scrollY: 0scrollbars: BarProp {
+    visible: true
+ }
+ secNoOnTimetable: falseselCheck: ƒ selCheck(req,course,csi,selected)selSortRule: "taken"selectAll: ƒ selectAll(el)selectCollegesBasedOnCampuses: ƒ selectCollegesBasedOnCampuses(cams)selectMore: ƒ selectMore(el)selectStudentTypeChange: ƒ selectStudentTypeChange()selectStudentTypeValue: ""selectTermIf1: falseself: Window {
+    window: Window, self: Window, document: document, name: '', location: Location, …
+ }
+ sendNonEnrolledOnly: falsesendUrlParamToField: ƒ sendUrlParamToField(param,field,massager)sessionStorage: Storage {
+    length: 0
+ }
+ sessionToName: ƒ sessionToName(ses)setCookie: ƒ setCookie(cname, cvalue, exdays)setInterval: ƒ setInterval()setMdlCheck: ƒ setMdlCheck($el,checked)setTimeout: ƒ setTimeout()sharedStorage: SharedStorage {
+    worklet: SharedStorageWorklet
+ }
+ shortUrl: trueshowCourseReqInLegend: falseshowDirectoryPicker: ƒ showDirectoryPicker()showDoActionsDefault: ƒ showDoActionsDefault(complete)showDoActionsPromissory: ƒ showDoActionsPromissory(complete)showFullCampusInLegend: falseshowHoursInLegend: trueshowLowCostTextbookLabel: falseshowMoreOn: falseshowNonBlockingHolds: falseshowOnlineDropdown: falseshowOpenFilePicker: ƒ showOpenFilePicker()showPeriodIfOne: falseshowPeriodWithDisp: falseshowPlansOnWelcome: falseshowRecommendationNumbers: trueshowReserveCapacities: falseshowSaveFilePicker: ƒ showSaveFilePicker()showTermNameInTermBox: falsesignInUrl: ""sisTerms: ƒ sisTerms()sortDayHours: ƒ sortDayHours(dayHourA,dayHourB)sortSetByValue: ƒ sortSetByValue(set)speechSynthesis: SpeechSynthesis {
+    pending: false, speaking: false, paused: false, onvoiceschanged: null
+ }
+ status: ""statusbar: BarProp {
+    visible: true
+ }
+ stop: ƒ stop()structuredClone: ƒ structuredClone()styleMedia: StyleMedia {
+    type: 'screen'
+ }
+ switchNameAndCode: falseswitchTimeOverrides: []tabbing: falsetemplate: "aub"termChangeLossWarning: falseterms: (2) ['202530', '202610']testEvalRgLines: ƒ testEvalRgLines()testThumb: ƒ testThumb()timesheetHourHeight: 0timezones: (8) [Timezone, Timezone, Timezone, Timezone, Timezone, Timezone, Timezone, Timezone]todayCode: 6447toggleExtraSelections: ƒ toggleExtraSelections(src,doToggle,instant,doSettle)toggle_visibility: ƒ toggle_visibility(feeReportPopup)toolbar: BarProp {
+    visible: true
+ }
+ top: Window {
+    window: Window, self: Window, document: document, name: '', location: Location, …
+ }
+ translateSortToParameter: ƒ translateSortToParameter(value)trustedTypes: TrustedTypePolicyFactory {
+    emptyHTML: emptyHTML "", emptyScript: emptyScript "", defaultPolicy: null
+ }
+ updateAccess: ƒ updateAccess(skipProcess)updateResultScheduleDisplay: ƒ updateResultScheduleDisplay(s)useInstitutionAsCampus: falseuseLeafCartItemId: falseuseSeatNumbers: trueuselSortRule: "rand"userId: "904374309"userPidm: "4374365"userPinPopup: ƒ userPinPopup()username: "Minsung Kim"vaMap: {
+    COMP-3220: '199c', COMP-3350: '026e', HIST-1210: 'c163', THEA-2010: '777e', COMP-2800: 'd745', …
+ }
+ validateCourseEnrollOptions: ƒ validateCourseEnrollOptions()validateUserPin: ƒ validateUserPin()viewport: Viewport {
+    segments: Array(1)
+ }
+ visLocations: []visibleCampuses: ""visualViewport: VisualViewport {
+    offsetLeft: 0, offsetTop: 0, pageLeft: 0, pageTop: 0, width: 1844.4444580078125, …
+ }
+ vsbDatabase: truevsbTimer: VsbTimer {
+    didServerActivity: ƒ, didCientActivity: ƒ, doLogin: ƒ, doLogout: ƒ
+ }
+ waitlistableFilter: truewarnLocationSwitchInstead: falsewarnPsLocationSwitchInstead: falsewebkitCancelAnimationFrame: ƒ webkitCancelAnimationFrame()webkitRequestAnimationFrame: ƒ webkitRequestAnimationFrame()webkitRequestFileSystem: ƒ webkitRequestFileSystem()webkitResolveLocalFileSystemURL: ƒ webkitResolveLocalFileSystemURL()weekSliderDisplay: falsewelcomeActionLink: ""wildcardDefaultNoSelection: falsewildcardsToDesc: ƒ wildcardsToDesc(wcs,term)window: Window {
+    window: Window, self: Window, document: document, name: '', location: Location, …
+ }
+ writeObjectIntoSelect: ƒ writeObjectIntoSelect($select,obj,addBlank,sortByVal)yearMonthDayToCode: ƒ yearMonthDayToCode(y,m,d)_alert: ƒ _alert(text)Infinity: InfinityAbortController: ƒ AbortController()AbortSignal: ƒ AbortSignal()AbsoluteOrientationSensor: ƒ AbsoluteOrientationSensor()AbstractRange: ƒ AbstractRange()Accelerometer: ƒ Accelerometer()AggregateError: ƒ AggregateError()AnalyserNode: ƒ AnalyserNode()Animation: ƒ Animation()AnimationEffect: ƒ AnimationEffect()AnimationEvent: ƒ AnimationEvent()AnimationPlaybackEvent: ƒ AnimationPlaybackEvent()AnimationTimeline: ƒ AnimationTimeline()Array: ƒ Array()ArrayBuffer: ƒ ArrayBuffer()AsyncDisposableStack: ƒ AsyncDisposableStack()Atomics: Atomics {
+    load: ƒ, store: ƒ, add: ƒ, sub: ƒ, and: ƒ, …
+ }
+ Attr: ƒ Attr()Audio: ƒ Audio()AudioBuffer: ƒ AudioBuffer()AudioBufferSourceNode: ƒ AudioBufferSourceNode()AudioContext: ƒ AudioContext()AudioData: ƒ AudioData()AudioDecoder: ƒ AudioDecoder()AudioDestinationNode: ƒ AudioDestinationNode()AudioEncoder: ƒ AudioEncoder()AudioListener: ƒ AudioListener()AudioNode: ƒ AudioNode()AudioParam: ƒ AudioParam()AudioParamMap: ƒ AudioParamMap()AudioProcessingEvent: ƒ AudioProcessingEvent()AudioScheduledSourceNode: ƒ AudioScheduledSourceNode()AudioSinkInfo: ƒ AudioSinkInfo()AudioWorklet: ƒ AudioWorklet()AudioWorkletNode: ƒ AudioWorkletNode()AuthenticatorAssertionResponse: ƒ AuthenticatorAssertionResponse()AuthenticatorAttestationResponse: ƒ AuthenticatorAttestationResponse()AuthenticatorResponse: ƒ AuthenticatorResponse()BackgroundFetchManager: ƒ BackgroundFetchManager()BackgroundFetchRecord: ƒ BackgroundFetchRecord()BackgroundFetchRegistration: ƒ BackgroundFetchRegistration()BarProp: ƒ BarProp()BarcodeDetector: ƒ BarcodeDetector()BaseAudioContext: ƒ BaseAudioContext()BatteryManager: ƒ BatteryManager()BeforeInstallPromptEvent: ƒ BeforeInstallPromptEvent()BeforeUnloadEvent: ƒ BeforeUnloadEvent()BigInt: ƒ BigInt()BigInt64Array: ƒ BigInt64Array()BigUint64Array: ƒ BigUint64Array()BiquadFilterNode: ƒ BiquadFilterNode()Blob: ƒ Blob()BlobEvent: ƒ BlobEvent()Bluetooth: ƒ Bluetooth()BluetoothCharacteristicProperties: ƒ BluetoothCharacteristicProperties()BluetoothDevice: ƒ BluetoothDevice()BluetoothRemoteGATTCharacteristic: ƒ BluetoothRemoteGATTCharacteristic()BluetoothRemoteGATTDescriptor: ƒ BluetoothRemoteGATTDescriptor()BluetoothRemoteGATTServer: ƒ BluetoothRemoteGATTServer()BluetoothRemoteGATTService: ƒ BluetoothRemoteGATTService()BluetoothUUID: ƒ BluetoothUUID()Boolean: ƒ Boolean()BroadcastChannel: ƒ BroadcastChannel()BrowserCaptureMediaStreamTrack: ƒ BrowserCaptureMediaStreamTrack()ByteLengthQueuingStrategy: ƒ ByteLengthQueuingStrategy()CDATASection: ƒ CDATASection()CSPViolationReportBody: ƒ CSPViolationReportBody()CSS: CSS {
+    highlights: HighlightRegistry, Hz: ƒ, Q: ƒ, cap: ƒ, ch: ƒ, …
+ }
+ CSSAnimation: ƒ CSSAnimation()CSSConditionRule: ƒ CSSConditionRule()CSSContainerRule: ƒ CSSContainerRule()CSSCounterStyleRule: ƒ CSSCounterStyleRule()CSSFontFaceRule: ƒ CSSFontFaceRule()CSSFontFeatureValuesRule: ƒ CSSFontFeatureValuesRule()CSSFontPaletteValuesRule: ƒ CSSFontPaletteValuesRule()CSSFunctionDeclarations: ƒ CSSFunctionDeclarations()CSSFunctionDescriptors: ƒ CSSFunctionDescriptors()CSSFunctionRule: ƒ CSSFunctionRule()CSSGroupingRule: ƒ CSSGroupingRule()CSSImageValue: ƒ CSSImageValue()CSSImportRule: ƒ CSSImportRule()CSSKeyframeRule: ƒ CSSKeyframeRule()CSSKeyframesRule: ƒ CSSKeyframesRule()CSSKeywordValue: ƒ CSSKeywordValue()CSSLayerBlockRule: ƒ CSSLayerBlockRule()CSSLayerStatementRule: ƒ CSSLayerStatementRule()CSSMarginRule: ƒ CSSMarginRule()CSSMathClamp: ƒ CSSMathClamp()CSSMathInvert: ƒ CSSMathInvert()CSSMathMax: ƒ CSSMathMax()CSSMathMin: ƒ CSSMathMin()CSSMathNegate: ƒ CSSMathNegate()CSSMathProduct: ƒ CSSMathProduct()CSSMathSum: ƒ CSSMathSum()CSSMathValue: ƒ CSSMathValue()CSSMatrixComponent: ƒ CSSMatrixComponent()CSSMediaRule: ƒ CSSMediaRule()CSSNamespaceRule: ƒ CSSNamespaceRule()CSSNestedDeclarations: ƒ CSSNestedDeclarations()CSSNumericArray: ƒ CSSNumericArray()CSSNumericValue: ƒ CSSNumericValue()CSSPageRule: ƒ CSSPageRule()CSSPerspective: ƒ CSSPerspective()CSSPositionTryDescriptors: ƒ CSSPositionTryDescriptors()CSSPositionTryRule: ƒ CSSPositionTryRule()CSSPositionValue: ƒ CSSPositionValue()CSSPropertyRule: ƒ CSSPropertyRule()CSSRotate: ƒ CSSRotate()CSSRule: ƒ CSSRule()CSSRuleList: ƒ CSSRuleList()CSSScale: ƒ CSSScale()CSSScopeRule: ƒ CSSScopeRule()CSSSkew: ƒ CSSSkew()CSSSkewX: ƒ CSSSkewX()CSSSkewY: ƒ CSSSkewY()CSSStartingStyleRule: ƒ CSSStartingStyleRule()CSSStyleDeclaration: ƒ CSSStyleDeclaration()CSSStyleRule: ƒ CSSStyleRule()CSSStyleSheet: ƒ CSSStyleSheet()CSSStyleValue: ƒ CSSStyleValue()CSSSupportsRule: ƒ CSSSupportsRule()CSSTransformComponent: ƒ CSSTransformComponent()CSSTransformValue: ƒ CSSTransformValue()CSSTransition: ƒ CSSTransition()CSSTranslate: ƒ CSSTranslate()CSSUnitValue: ƒ CSSUnitValue()CSSUnparsedValue: ƒ CSSUnparsedValue()CSSVariableReferenceValue: ƒ CSSVariableReferenceValue()CSSViewTransitionRule: ƒ CSSViewTransitionRule()Cache: ƒ Cache()CacheStorage: ƒ CacheStorage()CanvasCaptureMediaStreamTrack: ƒ CanvasCaptureMediaStreamTrack()CanvasGradient: ƒ CanvasGradient()CanvasPattern: ƒ CanvasPattern()CanvasRenderingContext2D: ƒ CanvasRenderingContext2D()CaptureController: ƒ CaptureController()CaretPosition: ƒ CaretPosition()ChannelMergerNode: ƒ ChannelMergerNode()ChannelSplitterNode: ƒ ChannelSplitterNode()ChapterInformation: ƒ ChapterInformation()CharacterBoundsUpdateEvent: ƒ CharacterBoundsUpdateEvent()CharacterData: ƒ CharacterData()Clipboard: ƒ Clipboard()ClipboardEvent: ƒ ClipboardEvent()ClipboardItem: ƒ ClipboardItem()CloseEvent: ƒ CloseEvent()CloseWatcher: ƒ CloseWatcher()CommandEvent: ƒ CommandEvent()Comment: ƒ Comment()CompositionEvent: ƒ CompositionEvent()CompressionStream: ƒ CompressionStream()ConstantSourceNode: ƒ ConstantSourceNode()ContentVisibilityAutoStateChangeEvent: ƒ ContentVisibilityAutoStateChangeEvent()ConvolverNode: ƒ ConvolverNode()CookieChangeEvent: ƒ CookieChangeEvent()CookieStore: ƒ CookieStore()CookieStoreManager: ƒ CookieStoreManager()CountQueuingStrategy: ƒ CountQueuingStrategy()CreateMonitor: ƒ CreateMonitor()Credential: ƒ Credential()CredentialsContainer: ƒ CredentialsContainer()CropTarget: ƒ CropTarget()Crypto: ƒ Crypto()CryptoKey: ƒ CryptoKey()CustomElementRegistry: ƒ CustomElementRegistry()CustomEvent: ƒ CustomEvent()CustomStateSet: ƒ CustomStateSet()DOMError: ƒ DOMError()DOMException: ƒ DOMException()DOMImplementation: ƒ DOMImplementation()DOMMatrix: ƒ DOMMatrix()DOMMatrixReadOnly: ƒ DOMMatrixReadOnly()DOMParser: ƒ DOMParser()DOMPoint: ƒ DOMPoint()DOMPointReadOnly: ƒ DOMPointReadOnly()DOMQuad: ƒ DOMQuad()DOMRect: ƒ DOMRect()DOMRectList: ƒ DOMRectList()DOMRectReadOnly: ƒ DOMRectReadOnly()DOMStringList: ƒ DOMStringList()DOMStringMap: ƒ DOMStringMap()DOMTokenList: ƒ DOMTokenList()DataTransfer: ƒ DataTransfer()DataTransferItem: ƒ DataTransferItem()DataTransferItemList: ƒ DataTransferItemList()DataView: ƒ DataView()Date: ƒ Date()DecompressionStream: ƒ DecompressionStream()DelayNode: ƒ DelayNode()DelegatedInkTrailPresenter: ƒ DelegatedInkTrailPresenter()DeviceMotionEvent: ƒ DeviceMotionEvent()DeviceMotionEventAcceleration: ƒ DeviceMotionEventAcceleration()DeviceMotionEventRotationRate: ƒ DeviceMotionEventRotationRate()DeviceOrientationEvent: ƒ DeviceOrientationEvent()DevicePosture: ƒ DevicePosture()DisposableStack: ƒ DisposableStack()Document: ƒ Document()DocumentFragment: ƒ DocumentFragment()DocumentPictureInPicture: ƒ DocumentPictureInPicture()DocumentPictureInPictureEvent: ƒ DocumentPictureInPictureEvent()DocumentTimeline: ƒ DocumentTimeline()DocumentType: ƒ DocumentType()DragEvent: ƒ DragEvent()DynamicsCompressorNode: ƒ DynamicsCompressorNode()EditContext: ƒ EditContext()Element: ƒ Element()ElementInternals: ƒ ElementInternals()EncodedAudioChunk: ƒ EncodedAudioChunk()EncodedVideoChunk: ƒ EncodedVideoChunk()Error: ƒ Error()ErrorEvent: ƒ ErrorEvent()EvalError: ƒ EvalError()Event: ƒ Event()EventCounts: ƒ EventCounts()EventSource: ƒ EventSource()EventTarget: ƒ EventTarget()External: ƒ External()EyeDropper: ƒ EyeDropper()FeaturePolicy: ƒ FeaturePolicy()FederatedCredential: ƒ FederatedCredential()Fence: ƒ Fence()FencedFrameConfig: ƒ FencedFrameConfig()FetchLaterResult: ƒ FetchLaterResult()File: ƒ File()FileList: ƒ FileList()FileReader: ƒ FileReader()FileSystemDirectoryHandle: ƒ FileSystemDirectoryHandle()FileSystemFileHandle: ƒ FileSystemFileHandle()FileSystemHandle: ƒ FileSystemHandle()FileSystemObserver: ƒ FileSystemObserver()FileSystemWritableFileStream: ƒ FileSystemWritableFileStream()FinalizationRegistry: ƒ FinalizationRegistry()Float16Array: ƒ Float16Array()Float32Array: ƒ Float32Array()Float64Array: ƒ Float64Array()FocusEvent: ƒ FocusEvent()FontData: ƒ FontData()FontFace: ƒ FontFace()FontFaceSetLoadEvent: ƒ FontFaceSetLoadEvent()FormData: ƒ FormData()FormDataEvent: ƒ FormDataEvent()FragmentDirective: ƒ FragmentDirective()Function: ƒ Function()GPU: ƒ GPU()GPUAdapter: ƒ GPUAdapter()GPUAdapterInfo: ƒ GPUAdapterInfo()GPUBindGroup: ƒ GPUBindGroup()GPUBindGroupLayout: ƒ GPUBindGroupLayout()GPUBuffer: ƒ GPUBuffer()GPUBufferUsage: GPUBufferUsage {
+    MAP_READ: 1, MAP_WRITE: 2, COPY_SRC: 4, COPY_DST: 8, INDEX: 16, …
+ }
+ GPUCanvasContext: ƒ GPUCanvasContext()GPUColorWrite: GPUColorWrite {
+    RED: 1, GREEN: 2, BLUE: 4, ALPHA: 8, ALL: 15, …
+ }
+ GPUCommandBuffer: ƒ GPUCommandBuffer()GPUCommandEncoder: ƒ GPUCommandEncoder()GPUCompilationInfo: ƒ GPUCompilationInfo()GPUCompilationMessage: ƒ GPUCompilationMessage()GPUComputePassEncoder: ƒ GPUComputePassEncoder()GPUComputePipeline: ƒ GPUComputePipeline()GPUDevice: ƒ GPUDevice()GPUDeviceLostInfo: ƒ GPUDeviceLostInfo()GPUError: ƒ GPUError()GPUExternalTexture: ƒ GPUExternalTexture()GPUInternalError: ƒ GPUInternalError()GPUMapMode: GPUMapMode {
+    READ: 1, WRITE: 2, Symbol(Symbol.toStringTag): 'GPUMapMode'
+ }
+ GPUOutOfMemoryError: ƒ GPUOutOfMemoryError()GPUPipelineError: ƒ GPUPipelineError()GPUPipelineLayout: ƒ GPUPipelineLayout()GPUQuerySet: ƒ GPUQuerySet()GPUQueue: ƒ GPUQueue()GPURenderBundle: ƒ GPURenderBundle()GPURenderBundleEncoder: ƒ GPURenderBundleEncoder()GPURenderPassEncoder: ƒ GPURenderPassEncoder()GPURenderPipeline: ƒ GPURenderPipeline()GPUSampler: ƒ GPUSampler()GPUShaderModule: ƒ GPUShaderModule()GPUShaderStage: GPUShaderStage {
+    VERTEX: 1, FRAGMENT: 2, COMPUTE: 4, Symbol(Symbol.toStringTag): 'GPUShaderStage'
+ }
+ GPUSupportedFeatures: ƒ GPUSupportedFeatures()GPUSupportedLimits: ƒ GPUSupportedLimits()GPUTexture: ƒ GPUTexture()GPUTextureUsage: GPUTextureUsage {
+    COPY_SRC: 1, COPY_DST: 2, TEXTURE_BINDING: 4, STORAGE_BINDING: 8, RENDER_ATTACHMENT: 16, …
+ }
+ GPUTextureView: ƒ GPUTextureView()GPUUncapturedErrorEvent: ƒ GPUUncapturedErrorEvent()GPUValidationError: ƒ GPUValidationError()GainNode: ƒ GainNode()Gamepad: ƒ Gamepad()GamepadButton: ƒ GamepadButton()GamepadEvent: ƒ GamepadEvent()GamepadHapticActuator: ƒ GamepadHapticActuator()Geolocation: ƒ Geolocation()GeolocationCoordinates: ƒ GeolocationCoordinates()GeolocationPosition: ƒ GeolocationPosition()GeolocationPositionError: ƒ GeolocationPositionError()GravitySensor: ƒ GravitySensor()Gyroscope: ƒ Gyroscope()HID: ƒ HID()HIDConnectionEvent: ƒ HIDConnectionEvent()HIDDevice: ƒ HIDDevice()HIDInputReportEvent: ƒ HIDInputReportEvent()HTMLAllCollection: ƒ HTMLAllCollection()HTMLAnchorElement: ƒ HTMLAnchorElement()HTMLAreaElement: ƒ HTMLAreaElement()HTMLAudioElement: ƒ HTMLAudioElement()HTMLBRElement: ƒ HTMLBRElement()HTMLBaseElement: ƒ HTMLBaseElement()HTMLBodyElement: ƒ HTMLBodyElement()HTMLButtonElement: ƒ HTMLButtonElement()HTMLCanvasElement: ƒ HTMLCanvasElement()HTMLCollection: ƒ HTMLCollection()HTMLDListElement: ƒ HTMLDListElement()HTMLDataElement: ƒ HTMLDataElement()HTMLDataListElement: ƒ HTMLDataListElement()HTMLDetailsElement: ƒ HTMLDetailsElement()HTMLDialogElement: ƒ HTMLDialogElement()HTMLDirectoryElement: ƒ HTMLDirectoryElement()HTMLDivElement: ƒ HTMLDivElement()HTMLDocument: ƒ HTMLDocument()HTMLElement: ƒ HTMLElement()HTMLEmbedElement: ƒ HTMLEmbedElement()HTMLFencedFrameElement: ƒ HTMLFencedFrameElement()HTMLFieldSetElement: ƒ HTMLFieldSetElement()HTMLFontElement: ƒ HTMLFontElement()HTMLFormControlsCollection: ƒ HTMLFormControlsCollection()HTMLFormElement: ƒ HTMLFormElement()HTMLFrameElement: ƒ HTMLFrameElement()HTMLFrameSetElement: ƒ HTMLFrameSetElement()HTMLHRElement: ƒ HTMLHRElement()HTMLHeadElement: ƒ HTMLHeadElement()HTMLHeadingElement: ƒ HTMLHeadingElement()HTMLHtmlElement: ƒ HTMLHtmlElement()HTMLIFrameElement: ƒ HTMLIFrameElement()HTMLImageElement: ƒ HTMLImageElement()HTMLInputElement: ƒ HTMLInputElement()HTMLLIElement: ƒ HTMLLIElement()HTMLLabelElement: ƒ HTMLLabelElement()HTMLLegendElement: ƒ HTMLLegendElement()HTMLLinkElement: ƒ HTMLLinkElement()HTMLMapElement: ƒ HTMLMapElement()HTMLMarqueeElement: ƒ HTMLMarqueeElement()HTMLMediaElement: ƒ HTMLMediaElement()HTMLMenuElement: ƒ HTMLMenuElement()HTMLMetaElement: ƒ HTMLMetaElement()HTMLMeterElement: ƒ HTMLMeterElement()HTMLModElement: ƒ HTMLModElement()HTMLOListElement: ƒ HTMLOListElement()HTMLObjectElement: ƒ HTMLObjectElement()HTMLOptGroupElement: ƒ HTMLOptGroupElement()HTMLOptionElement: ƒ HTMLOptionElement()HTMLOptionsCollection: ƒ HTMLOptionsCollection()HTMLOutputElement: ƒ HTMLOutputElement()HTMLParagraphElement: ƒ HTMLParagraphElement()HTMLParamElement: ƒ HTMLParamElement()HTMLPictureElement: ƒ HTMLPictureElement()HTMLPreElement: ƒ HTMLPreElement()HTMLProgressElement: ƒ HTMLProgressElement()HTMLQuoteElement: ƒ HTMLQuoteElement()HTMLScriptElement: ƒ HTMLScriptElement()HTMLSelectElement: ƒ HTMLSelectElement()HTMLSelectedContentElement: ƒ HTMLSelectedContentElement()HTMLSlotElement: ƒ HTMLSlotElement()HTMLSourceElement: ƒ HTMLSourceElement()HTMLSpanElement: ƒ HTMLSpanElement()HTMLStyleElement: ƒ HTMLStyleElement()HTMLTableCaptionElement: ƒ HTMLTableCaptionElement()HTMLTableCellElement: ƒ HTMLTableCellElement()HTMLTableColElement: ƒ HTMLTableColElement()HTMLTableElement: ƒ HTMLTableElement()HTMLTableRowElement: ƒ HTMLTableRowElement()HTMLTableSectionElement: ƒ HTMLTableSectionElement()HTMLTemplateElement: ƒ HTMLTemplateElement()HTMLTextAreaElement: ƒ HTMLTextAreaElement()HTMLTimeElement: ƒ HTMLTimeElement()HTMLTitleElement: ƒ HTMLTitleElement()HTMLTrackElement: ƒ HTMLTrackElement()HTMLUListElement: ƒ HTMLUListElement()HTMLUnknownElement: ƒ HTMLUnknownElement()HTMLVideoElement: ƒ HTMLVideoElement()HashChangeEvent: ƒ HashChangeEvent()Headers: ƒ Headers()Highlight: ƒ Highlight()HighlightRegistry: ƒ HighlightRegistry()History: ƒ History()IDBCursor: ƒ IDBCursor()IDBCursorWithValue: ƒ IDBCursorWithValue()IDBDatabase: ƒ IDBDatabase()IDBFactory: ƒ IDBFactory()IDBIndex: ƒ IDBIndex()IDBKeyRange: ƒ IDBKeyRange()IDBObjectStore: ƒ IDBObjectStore()IDBOpenDBRequest: ƒ IDBOpenDBRequest()IDBRequest: ƒ IDBRequest()IDBTransaction: ƒ IDBTransaction()IDBVersionChangeEvent: ƒ IDBVersionChangeEvent()IIRFilterNode: ƒ IIRFilterNode()IdleDeadline: ƒ IdleDeadline()IdleDetector: ƒ IdleDetector()Image: ƒ Image()ImageBitmap: ƒ ImageBitmap()ImageBitmapRenderingContext: ƒ ImageBitmapRenderingContext()ImageCapture: ƒ ImageCapture()ImageData: ƒ ImageData()ImageDecoder: ƒ ImageDecoder()ImageTrack: ƒ ImageTrack()ImageTrackList: ƒ ImageTrackList()Ink: ƒ Ink()InputDeviceCapabilities: ƒ InputDeviceCapabilities()InputDeviceInfo: ƒ InputDeviceInfo()InputEvent: ƒ InputEvent()Int8Array: ƒ Int8Array()Int16Array: ƒ Int16Array()Int32Array: ƒ Int32Array()IntegrityViolationReportBody: ƒ IntegrityViolationReportBody()IntersectionObserver: ƒ IntersectionObserver()IntersectionObserverEntry: ƒ IntersectionObserverEntry()Intl: Intl {
+    getCanonicalLocales: ƒ, supportedValuesOf: ƒ, DateTimeFormat: ƒ, NumberFormat: ƒ, Collator: ƒ, …
+ }
+ Iterator: ƒ Iterator()JSON: JSON {
+    Symbol(Symbol.toStringTag): 'JSON', parse: ƒ, stringify: ƒ, rawJSON: ƒ, isRawJSON: ƒ
+ }
+ Keyboard: ƒ Keyboard()KeyboardEvent: ƒ KeyboardEvent()KeyboardLayoutMap: ƒ KeyboardLayoutMap()KeyframeEffect: ƒ KeyframeEffect()LanguageDetector: ƒ LanguageDetector()LargestContentfulPaint: ƒ LargestContentfulPaint()LaunchParams: ƒ LaunchParams()LaunchQueue: ƒ LaunchQueue()LayoutShift: ƒ LayoutShift()LayoutShiftAttribution: ƒ LayoutShiftAttribution()LinearAccelerationSensor: ƒ LinearAccelerationSensor()Location: ƒ Location()Lock: ƒ Lock()LockManager: ƒ LockManager()MIDIAccess: ƒ MIDIAccess()MIDIConnectionEvent: ƒ MIDIConnectionEvent()MIDIInput: ƒ MIDIInput()MIDIInputMap: ƒ MIDIInputMap()MIDIMessageEvent: ƒ MIDIMessageEvent()MIDIOutput: ƒ MIDIOutput()MIDIOutputMap: ƒ MIDIOutputMap()MIDIPort: ƒ MIDIPort()Map: ƒ Map()Math: Math {
+    abs: ƒ, acos: ƒ, acosh: ƒ, asin: ƒ, asinh: ƒ, …
+ }
+ MathMLElement: ƒ MathMLElement()MediaCapabilities: ƒ MediaCapabilities()MediaDeviceInfo: ƒ MediaDeviceInfo()MediaDevices: ƒ MediaDevices()MediaElementAudioSourceNode: ƒ MediaElementAudioSourceNode()MediaEncryptedEvent: ƒ MediaEncryptedEvent()MediaError: ƒ MediaError()MediaKeyMessageEvent: ƒ MediaKeyMessageEvent()MediaKeySession: ƒ MediaKeySession()MediaKeyStatusMap: ƒ MediaKeyStatusMap()MediaKeySystemAccess: ƒ MediaKeySystemAccess()MediaKeys: ƒ MediaKeys()MediaList: ƒ MediaList()MediaMetadata: ƒ MediaMetadata()MediaQueryList: ƒ MediaQueryList()MediaQueryListEvent: ƒ MediaQueryListEvent()MediaRecorder: ƒ MediaRecorder()MediaSession: ƒ MediaSession()MediaSource: ƒ MediaSource()MediaSourceHandle: ƒ MediaSourceHandle()MediaStream: ƒ MediaStream()MediaStreamAudioDestinationNode: ƒ MediaStreamAudioDestinationNode()MediaStreamAudioSourceNode: ƒ MediaStreamAudioSourceNode()MediaStreamEvent: ƒ MediaStreamEvent()MediaStreamTrack: ƒ MediaStreamTrack()MediaStreamTrackAudioStats: ƒ MediaStreamTrackAudioStats()MediaStreamTrackEvent: ƒ MediaStreamTrackEvent()MediaStreamTrackGenerator: ƒ MediaStreamTrackGenerator()MediaStreamTrackProcessor: ƒ MediaStreamTrackProcessor()MediaStreamTrackVideoStats: ƒ MediaStreamTrackVideoStats()MessageChannel: ƒ MessageChannel()MessageEvent: ƒ MessageEvent()MessagePort: ƒ MessagePort()MimeType: ƒ MimeType()MimeTypeArray: ƒ MimeTypeArray()MouseEvent: ƒ MouseEvent()MutationObserver: ƒ MutationObserver()MutationRecord: ƒ MutationRecord()NaN: NaNNamedNodeMap: ƒ NamedNodeMap()NavigateEvent: ƒ NavigateEvent()Navigation: ƒ Navigation()NavigationActivation: ƒ NavigationActivation()NavigationCurrentEntryChangeEvent: ƒ NavigationCurrentEntryChangeEvent()NavigationDestination: ƒ NavigationDestination()NavigationHistoryEntry: ƒ NavigationHistoryEntry()NavigationPreloadManager: ƒ NavigationPreloadManager()NavigationTransition: ƒ NavigationTransition()Navigator: ƒ Navigator()NavigatorManagedData: ƒ NavigatorManagedData()NavigatorUAData: ƒ NavigatorUAData()NetworkInformation: ƒ NetworkInformation()Node: ƒ Node()NodeFilter: ƒ NodeFilter()NodeIterator: ƒ NodeIterator()NodeList: ƒ NodeList()NotRestoredReasonDetails: ƒ NotRestoredReasonDetails()NotRestoredReasons: ƒ NotRestoredReasons()Notification: ƒ Notification()Number: ƒ Number()OTPCredential: ƒ OTPCredential()Object: ƒ Object()Observable: ƒ Observable()OfflineAudioCompletionEvent: ƒ OfflineAudioCompletionEvent()OfflineAudioContext: ƒ OfflineAudioContext()OffscreenCanvas: ƒ OffscreenCanvas()OffscreenCanvasRenderingContext2D: ƒ OffscreenCanvasRenderingContext2D()Option: ƒ Option()OrientationSensor: ƒ OrientationSensor()OscillatorNode: ƒ OscillatorNode()OverconstrainedError: ƒ OverconstrainedError()PageRevealEvent: ƒ PageRevealEvent()PageSwapEvent: ƒ PageSwapEvent()PageTransitionEvent: ƒ PageTransitionEvent()PannerNode: ƒ PannerNode()PasswordCredential: ƒ PasswordCredential()Path2D: ƒ Path2D()PaymentAddress: ƒ PaymentAddress()PaymentManager: ƒ PaymentManager()PaymentMethodChangeEvent: ƒ PaymentMethodChangeEvent()PaymentRequest: ƒ PaymentRequest()PaymentRequestUpdateEvent: ƒ PaymentRequestUpdateEvent()PaymentResponse: ƒ PaymentResponse()Performance: ƒ Performance()PerformanceElementTiming: ƒ PerformanceElementTiming()PerformanceEntry: ƒ PerformanceEntry()PerformanceEventTiming: ƒ PerformanceEventTiming()PerformanceLongAnimationFrameTiming: ƒ PerformanceLongAnimationFrameTiming()PerformanceLongTaskTiming: ƒ PerformanceLongTaskTiming()PerformanceMark: ƒ PerformanceMark()PerformanceMeasure: ƒ PerformanceMeasure()PerformanceNavigation: ƒ PerformanceNavigation()PerformanceNavigationTiming: ƒ PerformanceNavigationTiming()PerformanceObserver: ƒ PerformanceObserver()PerformanceObserverEntryList: ƒ PerformanceObserverEntryList()PerformancePaintTiming: ƒ PerformancePaintTiming()PerformanceResourceTiming: ƒ PerformanceResourceTiming()PerformanceScriptTiming: ƒ PerformanceScriptTiming()PerformanceServerTiming: ƒ PerformanceServerTiming()PerformanceTiming: ƒ PerformanceTiming()PeriodicSyncManager: ƒ PeriodicSyncManager()PeriodicWave: ƒ PeriodicWave()PermissionStatus: ƒ PermissionStatus()Permissions: ƒ Permissions()PictureInPictureEvent: ƒ PictureInPictureEvent()PictureInPictureWindow: ƒ PictureInPictureWindow()Plugin: ƒ Plugin()PluginArray: ƒ PluginArray()PointerEvent: ƒ PointerEvent()PopStateEvent: ƒ PopStateEvent()Presentation: ƒ Presentation()PresentationAvailability: ƒ PresentationAvailability()PresentationConnection: ƒ PresentationConnection()PresentationConnectionAvailableEvent: ƒ PresentationConnectionAvailableEvent()PresentationConnectionCloseEvent: ƒ PresentationConnectionCloseEvent()PresentationConnectionList: ƒ PresentationConnectionList()PresentationReceiver: ƒ PresentationReceiver()PresentationRequest: ƒ PresentationRequest()PressureObserver: ƒ PressureObserver()PressureRecord: ƒ PressureRecord()ProcessingInstruction: ƒ ProcessingInstruction()Profiler: {
+    interval: 3, recording: true, preventing: false, log: false, preventionTime: 20, …
+ }
+ ProgressEvent: ƒ ProgressEvent()Promise: ƒ Promise()PromiseRejectionEvent: ƒ PromiseRejectionEvent()ProtectedAudience: ƒ ProtectedAudience()Proxy: ƒ Proxy()PublicKeyCredential: ƒ PublicKeyCredential()PushManager: ƒ PushManager()PushSubscription: ƒ PushSubscription()PushSubscriptionOptions: ƒ PushSubscriptionOptions()QuotaExceededError: ƒ QuotaExceededError()RTCCertificate: ƒ RTCCertificate()RTCDTMFSender: ƒ RTCDTMFSender()RTCDTMFToneChangeEvent: ƒ RTCDTMFToneChangeEvent()RTCDataChannel: ƒ RTCDataChannel()RTCDataChannelEvent: ƒ RTCDataChannelEvent()RTCDtlsTransport: ƒ RTCDtlsTransport()RTCEncodedAudioFrame: ƒ RTCEncodedAudioFrame()RTCEncodedVideoFrame: ƒ RTCEncodedVideoFrame()RTCError: ƒ RTCError()RTCErrorEvent: ƒ RTCErrorEvent()RTCIceCandidate: ƒ RTCIceCandidate()RTCIceTransport: ƒ RTCIceTransport()RTCPeerConnection: ƒ RTCPeerConnection()RTCPeerConnectionIceErrorEvent: ƒ RTCPeerConnectionIceErrorEvent()RTCPeerConnectionIceEvent: ƒ RTCPeerConnectionIceEvent()RTCRtpReceiver: ƒ RTCRtpReceiver()RTCRtpSender: ƒ RTCRtpSender()RTCRtpTransceiver: ƒ RTCRtpTransceiver()RTCSctpTransport: ƒ RTCSctpTransport()RTCSessionDescription: ƒ RTCSessionDescription()RTCStatsReport: ƒ RTCStatsReport()RTCTrackEvent: ƒ RTCTrackEvent()RadioNodeList: ƒ RadioNodeList()Range: ƒ Range()RangeError: ƒ RangeError()ReadableByteStreamController: ƒ ReadableByteStreamController()ReadableStream: ƒ ReadableStream()ReadableStreamBYOBReader: ƒ ReadableStreamBYOBReader()ReadableStreamBYOBRequest: ƒ ReadableStreamBYOBRequest()ReadableStreamDefaultController: ƒ ReadableStreamDefaultController()ReadableStreamDefaultReader: ƒ ReadableStreamDefaultReader()ReferenceError: ƒ ReferenceError()Reflect: Reflect {
+    defineProperty: ƒ, deleteProperty: ƒ, apply: ƒ, construct: ƒ, get: ƒ, …
+ }
+ RegExp: ƒ RegExp()RelativeOrientationSensor: ƒ RelativeOrientationSensor()RemotePlayback: ƒ RemotePlayback()ReportBody: ƒ ReportBody()ReportingObserver: ƒ ReportingObserver()Request: ƒ Request()ResizeObserver: ƒ ResizeObserver()ResizeObserverEntry: ƒ ResizeObserverEntry()ResizeObserverSize: ƒ ResizeObserverSize()Response: ƒ Response()RestrictionTarget: ƒ RestrictionTarget()SVGAElement: ƒ SVGAElement()SVGAngle: ƒ SVGAngle()SVGAnimateElement: ƒ SVGAnimateElement()SVGAnimateMotionElement: ƒ SVGAnimateMotionElement()SVGAnimateTransformElement: ƒ SVGAnimateTransformElement()SVGAnimatedAngle: ƒ SVGAnimatedAngle()SVGAnimatedBoolean: ƒ SVGAnimatedBoolean()SVGAnimatedEnumeration: ƒ SVGAnimatedEnumeration()SVGAnimatedInteger: ƒ SVGAnimatedInteger()SVGAnimatedLength: ƒ SVGAnimatedLength()SVGAnimatedLengthList: ƒ SVGAnimatedLengthList()SVGAnimatedNumber: ƒ SVGAnimatedNumber()SVGAnimatedNumberList: ƒ SVGAnimatedNumberList()SVGAnimatedPreserveAspectRatio: ƒ SVGAnimatedPreserveAspectRatio()SVGAnimatedRect: ƒ SVGAnimatedRect()SVGAnimatedString: ƒ SVGAnimatedString()SVGAnimatedTransformList: ƒ SVGAnimatedTransformList()SVGAnimationElement: ƒ SVGAnimationElement()SVGCircleElement: ƒ SVGCircleElement()SVGClipPathElement: ƒ SVGClipPathElement()SVGComponentTransferFunctionElement: ƒ SVGComponentTransferFunctionElement()SVGDefsElement: ƒ SVGDefsElement()SVGDescElement: ƒ SVGDescElement()SVGElement: ƒ SVGElement()SVGEllipseElement: ƒ SVGEllipseElement()SVGFEBlendElement: ƒ SVGFEBlendElement()SVGFEColorMatrixElement: ƒ SVGFEColorMatrixElement()SVGFEComponentTransferElement: ƒ SVGFEComponentTransferElement()SVGFECompositeElement: ƒ SVGFECompositeElement()SVGFEConvolveMatrixElement: ƒ SVGFEConvolveMatrixElement()SVGFEDiffuseLightingElement: ƒ SVGFEDiffuseLightingElement()SVGFEDisplacementMapElement: ƒ SVGFEDisplacementMapElement()SVGFEDistantLightElement: ƒ SVGFEDistantLightElement()SVGFEDropShadowElement: ƒ SVGFEDropShadowElement()SVGFEFloodElement: ƒ SVGFEFloodElement()SVGFEFuncAElement: ƒ SVGFEFuncAElement()SVGFEFuncBElement: ƒ SVGFEFuncBElement()SVGFEFuncGElement: ƒ SVGFEFuncGElement()SVGFEFuncRElement: ƒ SVGFEFuncRElement()SVGFEGaussianBlurElement: ƒ SVGFEGaussianBlurElement()SVGFEImageElement: ƒ SVGFEImageElement()SVGFEMergeElement: ƒ SVGFEMergeElement()SVGFEMergeNodeElement: ƒ SVGFEMergeNodeElement()SVGFEMorphologyElement: ƒ SVGFEMorphologyElement()SVGFEOffsetElement: ƒ SVGFEOffsetElement()SVGFEPointLightElement: ƒ SVGFEPointLightElement()SVGFESpecularLightingElement: ƒ SVGFESpecularLightingElement()SVGFESpotLightElement: ƒ SVGFESpotLightElement()SVGFETileElement: ƒ SVGFETileElement()SVGFETurbulenceElement: ƒ SVGFETurbulenceElement()SVGFilterElement: ƒ SVGFilterElement()SVGForeignObjectElement: ƒ SVGForeignObjectElement()SVGGElement: ƒ SVGGElement()SVGGeometryElement: ƒ SVGGeometryElement()SVGGradientElement: ƒ SVGGradientElement()SVGGraphicsElement: ƒ SVGGraphicsElement()SVGImageElement: ƒ SVGImageElement()SVGLength: ƒ SVGLength()SVGLengthList: ƒ SVGLengthList()SVGLineElement: ƒ SVGLineElement()SVGLinearGradientElement: ƒ SVGLinearGradientElement()SVGMPathElement: ƒ SVGMPathElement()SVGMarkerElement: ƒ SVGMarkerElement()SVGMaskElement: ƒ SVGMaskElement()SVGMatrix: ƒ SVGMatrix()SVGMetadataElement: ƒ SVGMetadataElement()SVGNumber: ƒ SVGNumber()SVGNumberList: ƒ SVGNumberList()SVGPathElement: ƒ SVGPathElement()SVGPatternElement: ƒ SVGPatternElement()SVGPoint: ƒ SVGPoint()SVGPointList: ƒ SVGPointList()SVGPolygonElement: ƒ SVGPolygonElement()SVGPolylineElement: ƒ SVGPolylineElement()SVGPreserveAspectRatio: ƒ SVGPreserveAspectRatio()SVGRadialGradientElement: ƒ SVGRadialGradientElement()SVGRect: ƒ SVGRect()SVGRectElement: ƒ SVGRectElement()SVGSVGElement: ƒ SVGSVGElement()SVGScriptElement: ƒ SVGScriptElement()SVGSetElement: ƒ SVGSetElement()SVGStopElement: ƒ SVGStopElement()SVGStringList: ƒ SVGStringList()SVGStyleElement: ƒ SVGStyleElement()SVGSwitchElement: ƒ SVGSwitchElement()SVGSymbolElement: ƒ SVGSymbolElement()SVGTSpanElement: ƒ SVGTSpanElement()SVGTextContentElement: ƒ SVGTextContentElement()SVGTextElement: ƒ SVGTextElement()SVGTextPathElement: ƒ SVGTextPathElement()SVGTextPositioningElement: ƒ SVGTextPositioningElement()SVGTitleElement: ƒ SVGTitleElement()SVGTransform: ƒ SVGTransform()SVGTransformList: ƒ SVGTransformList()SVGUnitTypes: ƒ SVGUnitTypes()SVGUseElement: ƒ SVGUseElement()SVGViewElement: ƒ SVGViewElement()Scheduler: ƒ Scheduler()Scheduling: ƒ Scheduling()Screen: ƒ Screen()ScreenDetailed: ƒ ScreenDetailed()ScreenDetails: ƒ ScreenDetails()ScreenOrientation: ƒ ScreenOrientation()ScriptProcessorNode: ƒ ScriptProcessorNode()ScrollTimeline: ƒ ScrollTimeline()SecurityPolicyViolationEvent: ƒ SecurityPolicyViolationEvent()Selection: ƒ Selection()Sensor: ƒ Sensor()SensorErrorEvent: ƒ SensorErrorEvent()Serial: ƒ Serial()SerialPort: ƒ SerialPort()ServiceWorker: ƒ ServiceWorker()ServiceWorkerContainer: ƒ ServiceWorkerContainer()ServiceWorkerRegistration: ƒ ServiceWorkerRegistration()Set: ƒ Set()ShadowRoot: ƒ ShadowRoot()SharedStorage: ƒ SharedStorage()SharedStorageAppendMethod: ƒ SharedStorageAppendMethod()SharedStorageClearMethod: ƒ SharedStorageClearMethod()SharedStorageDeleteMethod: ƒ SharedStorageDeleteMethod()SharedStorageModifierMethod: ƒ SharedStorageModifierMethod()SharedStorageSetMethod: ƒ SharedStorageSetMethod()SharedStorageWorklet: ƒ SharedStorageWorklet()SharedWorker: ƒ SharedWorker()SnapEvent: ƒ SnapEvent()SourceBuffer: ƒ SourceBuffer()SourceBufferList: ƒ SourceBufferList()SpeechGrammar: ƒ SpeechGrammar()SpeechGrammarList: ƒ SpeechGrammarList()SpeechRecognition: ƒ SpeechRecognition()SpeechRecognitionErrorEvent: ƒ SpeechRecognitionErrorEvent()SpeechRecognitionEvent: ƒ SpeechRecognitionEvent()SpeechSynthesis: ƒ SpeechSynthesis()SpeechSynthesisErrorEvent: ƒ SpeechSynthesisErrorEvent()SpeechSynthesisEvent: ƒ SpeechSynthesisEvent()SpeechSynthesisUtterance: ƒ SpeechSynthesisUtterance()SpeechSynthesisVoice: ƒ SpeechSynthesisVoice()StaticRange: ƒ StaticRange()StereoPannerNode: ƒ StereoPannerNode()Storage: ƒ Storage()StorageBucket: ƒ StorageBucket()StorageBucketManager: ƒ StorageBucketManager()StorageEvent: ƒ StorageEvent()StorageManager: ƒ StorageManager()String: ƒ String()StylePropertyMap: ƒ StylePropertyMap()StylePropertyMapReadOnly: ƒ StylePropertyMapReadOnly()StyleSheet: ƒ StyleSheet()StyleSheetList: ƒ StyleSheetList()SubmitEvent: ƒ SubmitEvent()Subscriber: ƒ Subscriber()SubtleCrypto: ƒ SubtleCrypto()Summarizer: ƒ Summarizer()SuppressedError: ƒ SuppressedError()Symbol: ƒ Symbol()SyncManager: ƒ SyncManager()SyntaxError: ƒ SyntaxError()TaskAttributionTiming: ƒ TaskAttributionTiming()TaskController: ƒ TaskController()TaskPriorityChangeEvent: ƒ TaskPriorityChangeEvent()TaskSignal: ƒ TaskSignal()Text: ƒ Text()TextDecoder: ƒ TextDecoder()TextDecoderStream: ƒ TextDecoderStream()TextEncoder: ƒ TextEncoder()TextEncoderStream: ƒ TextEncoderStream()TextEvent: ƒ TextEvent()TextFormat: ƒ TextFormat()TextFormatUpdateEvent: ƒ TextFormatUpdateEvent()TextMetrics: ƒ TextMetrics()TextTrack: ƒ TextTrack()TextTrackCue: ƒ TextTrackCue()TextTrackCueList: ƒ TextTrackCueList()TextTrackList: ƒ TextTrackList()TextUpdateEvent: ƒ TextUpdateEvent()TimeRanges: ƒ TimeRanges()ToggleEvent: ƒ ToggleEvent()Touch: ƒ Touch()TouchEvent: ƒ TouchEvent()TouchList: ƒ TouchList()TrackEvent: ƒ TrackEvent()TransformStream: ƒ TransformStream()TransformStreamDefaultController: ƒ TransformStreamDefaultController()TransitionEvent: ƒ TransitionEvent()Translator: ƒ Translator()TreeWalker: ƒ TreeWalker()TrustedHTML: ƒ TrustedHTML()TrustedScript: ƒ TrustedScript()TrustedScriptURL: ƒ TrustedScriptURL()TrustedTypePolicy: ƒ TrustedTypePolicy()TrustedTypePolicyFactory: ƒ TrustedTypePolicyFactory()TypeError: ƒ TypeError()UIEvent: ƒ UIEvent()URIError: ƒ URIError()URL: ƒ URL()URLPattern: ƒ URLPattern()URLSearchParams: ƒ URLSearchParams()USB: ƒ USB()USBAlternateInterface: ƒ USBAlternateInterface()USBConfiguration: ƒ USBConfiguration()USBConnectionEvent: ƒ USBConnectionEvent()USBDevice: ƒ USBDevice()USBEndpoint: ƒ USBEndpoint()USBInTransferResult: ƒ USBInTransferResult()USBInterface: ƒ USBInterface()USBIsochronousInTransferPacket: ƒ USBIsochronousInTransferPacket()USBIsochronousInTransferResult: ƒ USBIsochronousInTransferResult()USBIsochronousOutTransferPacket: ƒ USBIsochronousOutTransferPacket()USBIsochronousOutTransferResult: ƒ USBIsochronousOutTransferResult()USBOutTransferResult: ƒ USBOutTransferResult()Uint8Array: ƒ Uint8Array()Uint8ClampedArray: ƒ Uint8ClampedArray()Uint16Array: ƒ Uint16Array()Uint32Array: ƒ Uint32Array()UserActivation: ƒ UserActivation()VTTCue: ƒ VTTCue()ValidityState: ƒ ValidityState()VideoColorSpace: ƒ VideoColorSpace()VideoDecoder: ƒ VideoDecoder()VideoEncoder: ƒ VideoEncoder()VideoFrame: ƒ VideoFrame()VideoPlaybackQuality: ƒ VideoPlaybackQuality()ViewTimeline: ƒ ViewTimeline()ViewTransition: ƒ ViewTransition()ViewTransitionTypeSet: ƒ ViewTransitionTypeSet()Viewport: ƒ Viewport()VirtualKeyboard: ƒ VirtualKeyboard()VirtualKeyboardGeometryChangeEvent: ƒ VirtualKeyboardGeometryChangeEvent()VisibilityStateEntry: ƒ VisibilityStateEntry()VisualViewport: ƒ VisualViewport()WGSLLanguageFeatures: ƒ WGSLLanguageFeatures()WakeLock: ƒ WakeLock()WakeLockSentinel: ƒ WakeLockSentinel()WaveShaperNode: ƒ WaveShaperNode()WeakMap: ƒ WeakMap()WeakRef: ƒ WeakRef()WeakSet: ƒ WeakSet()WebAssembly: WebAssembly {
+    compile: ƒ, validate: ƒ, instantiate: ƒ, compileStreaming: ƒ, instantiateStreaming: ƒ, …
+ }
+ WebGL2RenderingContext: ƒ WebGL2RenderingContext()WebGLActiveInfo: ƒ WebGLActiveInfo()WebGLBuffer: ƒ WebGLBuffer()WebGLContextEvent: ƒ WebGLContextEvent()WebGLFramebuffer: ƒ WebGLFramebuffer()WebGLObject: ƒ WebGLObject()WebGLProgram: ƒ WebGLProgram()WebGLQuery: ƒ WebGLQuery()WebGLRenderbuffer: ƒ WebGLRenderbuffer()WebGLRenderingContext: ƒ WebGLRenderingContext()WebGLSampler: ƒ WebGLSampler()WebGLShader: ƒ WebGLShader()WebGLShaderPrecisionFormat: ƒ WebGLShaderPrecisionFormat()WebGLSync: ƒ WebGLSync()WebGLTexture: ƒ WebGLTexture()WebGLTransformFeedback: ƒ WebGLTransformFeedback()WebGLUniformLocation: ƒ WebGLUniformLocation()WebGLVertexArrayObject: ƒ WebGLVertexArrayObject()WebKitCSSMatrix: ƒ DOMMatrix()WebKitMutationObserver: ƒ MutationObserver()WebSocket: ƒ WebSocket()WebSocketError: ƒ WebSocketError()WebSocketStream: ƒ WebSocketStream()WebTransport: ƒ WebTransport()WebTransportBidirectionalStream: ƒ WebTransportBidirectionalStream()WebTransportDatagramDuplexStream: ƒ WebTransportDatagramDuplexStream()WebTransportError: ƒ WebTransportError()WheelEvent: ƒ WheelEvent()Window: ƒ Window()WindowControlsOverlay: ƒ WindowControlsOverlay()WindowControlsOverlayGeometryChangeEvent: ƒ WindowControlsOverlayGeometryChangeEvent()Worker: ƒ Worker()Worklet: ƒ Worklet()WritableStream: ƒ WritableStream()WritableStreamDefaultController: ƒ WritableStreamDefaultController()WritableStreamDefaultWriter: ƒ WritableStreamDefaultWriter()XMLDocument: ƒ XMLDocument()XMLHttpRequest: ƒ XMLHttpRequest()XMLHttpRequestEventTarget: ƒ XMLHttpRequestEventTarget()XMLHttpRequestUpload: ƒ XMLHttpRequestUpload()XMLSerializer: ƒ XMLSerializer()XPathEvaluator: ƒ XPathEvaluator()XPathExpression: ƒ XPathExpression()XPathResult: ƒ XPathResult()XRAnchor: ƒ XRAnchor()XRAnchorSet: ƒ XRAnchorSet()XRBoundedReferenceSpace: ƒ XRBoundedReferenceSpace()XRCPUDepthInformation: ƒ XRCPUDepthInformation()XRCamera: ƒ XRCamera()XRDOMOverlayState: ƒ XRDOMOverlayState()XRDepthInformation: ƒ XRDepthInformation()XRFrame: ƒ XRFrame()XRHand: ƒ XRHand()XRHitTestResult: ƒ XRHitTestResult()XRHitTestSource: ƒ XRHitTestSource()XRInputSource: ƒ XRInputSource()XRInputSourceArray: ƒ XRInputSourceArray()XRInputSourceEvent: ƒ XRInputSourceEvent()XRInputSourcesChangeEvent: ƒ XRInputSourcesChangeEvent()XRJointPose: ƒ XRJointPose()XRJointSpace: ƒ XRJointSpace()XRLayer: ƒ XRLayer()XRLightEstimate: ƒ XRLightEstimate()XRLightProbe: ƒ XRLightProbe()XRPose: ƒ XRPose()XRRay: ƒ XRRay()XRReferenceSpace: ƒ XRReferenceSpace()XRReferenceSpaceEvent: ƒ XRReferenceSpaceEvent()XRRenderState: ƒ XRRenderState()XRRigidTransform: ƒ XRRigidTransform()XRSession: ƒ XRSession()XRSessionEvent: ƒ XRSessionEvent()XRSpace: ƒ XRSpace()XRSystem: ƒ XRSystem()XRTransientInputHitTestResult: ƒ XRTransientInputHitTestResult()XRTransientInputHitTestSource: ƒ XRTransientInputHitTestSource()XRView: ƒ XRView()XRViewerPose: ƒ XRViewerPose()XRViewport: ƒ XRViewport()XRWebGLBinding: ƒ XRWebGLBinding()XRWebGLDepthInformation: ƒ XRWebGLDepthInformation()XRWebGLLayer: ƒ XRWebGLLayer()XSLTProcessor: ƒ XSLTProcessor()console: console {
+    debug: ƒ, error: ƒ, info: ƒ, log: ƒ, warn: ƒ, …
+ }
+ decodeURI: ƒ decodeURI()decodeURIComponent: ƒ decodeURIComponent()encodeURI: ƒ encodeURI()encodeURIComponent: ƒ encodeURIComponent()escape: ƒ escape()eval: ƒ eval()globalThis: Window {
+    window: Window, self: Window, document: document, name: '', location: Location, …
+ }
+ isFinite: ƒ isFinite()isNaN: ƒ isNaN()offscreenBuffering: trueparseFloat: ƒ parseFloat()parseInt: ƒ parseInt()undefined: undefinedunescape: ƒ unescape()webkitMediaStream: ƒ MediaStream()webkitRTCPeerConnection: ƒ RTCPeerConnection()webkitSpeechGrammar: ƒ SpeechGrammar()webkitSpeechGrammarList: ƒ SpeechGrammarList()webkitSpeechRecognition: ƒ SpeechRecognition()webkitSpeechRecognitionError: ƒ SpeechRecognitionErrorEvent()webkitSpeechRecognitionEvent: ƒ SpeechRecognitionEvent()webkitURL: ƒ URL()[[Prototype]]: Window
