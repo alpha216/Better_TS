@@ -32,9 +32,9 @@ async function fetchProfessorDataFromAPI(profName) {
   const variables = {
     query: {
       text: profName,
-      schoolID: "U2Nob29sLTYw" // Auburn University의 RMP 학교 ID
+      schoolID: "U2Nob29sLTYw" // Auburn University RMP school ID
     },
-    count: 3, // 가장 일치하는 교수 1명 정보만 가져오기
+    count: 3, // Return information for the top 3 matching professors
     includeCompare: true
   };
 
@@ -68,7 +68,31 @@ async function fetchProfessorDataFromAPI(profName) {
     return edges;
   } catch (error) {
     console.error('Error fetching RMP data in background for', profName, ':', error);
-    throw error; // 에러를 다시 던져서 메시지 핸들러에서 잡도록 함
+    throw error; // Throw the error to be handled by the caller
+  }
+}
+
+async function fetchLatestVersionFromAPI() {
+  try {
+    const response = await fetch('https://alpha216.github.io/BettertigerSchedule/api/newest', {
+      cache: 'no-store'
+    });
+
+    if (!response.ok) {
+      throw new Error(`Version API request failed: ${response.status}`);
+    }
+
+    const payload = await response.json();
+    const newest = payload?.newest;
+
+    if (typeof newest !== 'string') {
+      throw new Error('Version API response missing "newest" string');
+    }
+
+    return newest;
+  } catch (error) {
+    console.error('Error fetching latest extension version:', error);
+    throw error;
   }
 }
 
@@ -82,5 +106,15 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
         sendResponse({ success: false, error: error.message });
       });
     return true; 
+  }
+  if (request.action === "fetchLatestVersion") {
+    fetchLatestVersionFromAPI()
+      .then(version => {
+        sendResponse({ success: true, version });
+      })
+      .catch(error => {
+        sendResponse({ success: false, error: error.message });
+      });
+    return true;
   }
 });
