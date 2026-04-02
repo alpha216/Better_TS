@@ -35,19 +35,45 @@ async function fetchProfessorData(name) {
 function updateDiv(prof, div) {
   const rating = prof.avgRating ?? 'N/A';
   const difficulty = prof.avgDifficulty ?? 'N/A';
-  div.textContent = `${div.textContent.trim()} / R: ${rating} / D: ${difficulty} / W: ${Math.ceil(prof.wouldTakeAgainPercent) ?? 'N/A'}%`;
+  const originalInstructorText = div.textContent.trim();
+  const infoText = `${originalInstructorText} / R: ${rating} / D: ${difficulty} / W: ${Math.ceil(prof.wouldTakeAgainPercent) ?? 'N/A'}%`;
+
+  div.textContent = '';
+  div.style.display = 'flex';
+  div.style.alignItems = 'center';
+  div.style.gap = '8px';
+
+  const infoIcon = document.createElement('div');
+  infoIcon.textContent = 'ℹ';
+  infoIcon.setAttribute('aria-hidden', 'true');
+  infoIcon.style.color = '#1d4ed8';
+  infoIcon.style.fontWeight = '700';
+  infoIcon.style.fontSize = '16px';
+  infoIcon.style.lineHeight = '1';
+  infoIcon.style.flexShrink = '0';
+  infoIcon.style.cursor = 'pointer';
+
+  const textSpan = document.createElement('span');
+  textSpan.textContent = infoText;
+  textSpan.style.cursor = 'pointer';
+
+  div.appendChild(infoIcon);
+  div.appendChild(textSpan);
   if(prof.avgRating >= 4.0) {
-    div.style.backgroundColor = '#BAD8B6';
+    textSpan.style.backgroundColor = '#BAD8B6';
   }
   else if(prof.avgRating >= 3.0) {
-    div.style.backgroundColor = '#FBF3B9';
+    textSpan.style.backgroundColor = '#FBF3B9';
   }
   else if(prof.avgRating < 3.0) {
-    div.style.backgroundColor = '#ffa9a9';
+    textSpan.style.backgroundColor = '#ffa9a9';
   }
-  div.style.cursor = 'pointer';
-  div.addEventListener('click', function() {
+  div.style.cursor = 'default';
+  textSpan.addEventListener('click', function() {
     window.open('https://www.ratemyprofessors.com/professor/'+prof.legacyId, '_blank');
+  });
+  infoIcon.addEventListener('click', function() {
+
   });
 };
 
@@ -73,13 +99,31 @@ async function findAllDivs() {
 
   console.log('Parsed classes:', classes);
 
+  // Fetching professor data
   for (const { title, instructor, instructorElement } of classes) {
-    if (instructor.includes(' / R:')) continue; // If rate exist, Do not repeat
-    if (!instructor) continue;
 
-    try {
+    if (instructor.includes(' / R:')) continue; // If rate exist, Do not repeat
+    if (!instructor) continue; // If no instructor, skip
+
+    try { // get professor data from RMP
       const res = await fetchProfessorData(instructor.replace(", ", " "));
-      const prof = res[0].node
+
+      for (const professorData of res) {
+        const prof = professorData.node;
+
+        const firstName = prof.firstName || '';
+        const lastName = prof.lastName || '';
+        const department = prof.department || '';
+
+        const difficulty = prof.avgDifficulty ?? 'N/A';
+        const rating = prof.avgRating ?? 'N/A';
+        const wouldTakeAgain = prof.wouldTakeAgainPercent ? `${Math.ceil(prof.wouldTakeAgainPercent)}%` : 'N/A';
+
+        const courseTitles = prof.courseCodes?.map(item => item.courseName) || [];
+      }
+  
+      const prof = res[0].node //Professor first data
+
       const first = instructor.split(", ")[1]
       const last = instructor.split(", ")[0]
       if(!instructor.includes(prof.firstName) || !instructor.includes(prof.lastName)) {
