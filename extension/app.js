@@ -51,30 +51,49 @@ function updateDiv(prof, div) {
   });
 };
 
+const classes = [];
+
 async function findAllDivs() {
-  const instructorDivs = document.querySelectorAll('div.rightnclear[title="Instructor(s)"]');
-  for (const div of instructorDivs) {
-    const originalName = div.textContent.trim();
-    if (originalName.includes(' / R:')) continue; // If rate exist, Do not repeat
-    if (!originalName) continue;
+
+  // Finding classes
+  classes.length = 0;
+  for (const courseBox of document.querySelectorAll('div.course_box')) {
+    const titleElement = courseBox.querySelector('h4.course_title');
+    const instructorElement = courseBox.querySelector('div.rightnclear[title="Instructor(s)"]');
+
+    const title = titleElement?.textContent?.trim() || '';
+    const instructor = instructorElement?.textContent?.trim() || '';
+
+    if (!title) {
+      continue;
+    }
+
+    classes.push({ title, instructor, instructorElement: instructorElement });
+  }
+
+  console.log('Parsed classes:', classes);
+
+  for (const { title, instructor, instructorElement } of classes) {
+    if (instructor.includes(' / R:')) continue; // If rate exist, Do not repeat
+    if (!instructor) continue;
 
     try {
-      const res = await fetchProfessorData(originalName.replace(", ", " "));
+      const res = await fetchProfessorData(instructor.replace(", ", " "));
       const prof = res[0].node
-      const first = originalName.split(", ")[1]
-      const last = originalName.split(", ")[0]
-      if(!originalName.includes(prof.firstName) || !originalName.includes(prof.lastName)) {
+      const first = instructor.split(", ")[1]
+      const last = instructor.split(", ")[0]
+      if(!instructor.includes(prof.firstName) || !instructor.includes(prof.lastName)) {
         if(!(prof.firstName + prof.lastName).includes(first) || !(prof.firstName + prof.lastName).includes(last)){
-          console.log('Name mismatch:', originalName, prof.firstName, prof.lastName);
-          // injectModals(div, res);
+          console.log('Name mismatch:', instructor, prof.firstName, prof.lastName);
+          // injectModals(instructorElement, res);
           continue; // Skip if names do not match
         }
       }
       if (prof) {
-        updateDiv(prof, div);
+        updateDiv(prof, instructorElement);
       }
     } catch (err) {
-      console.error('Error fetching RMP data for', originalName, err);
+      console.error('Error fetching RMP data for', instructor, err);
     }
   }
 }

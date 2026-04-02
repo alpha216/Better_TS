@@ -74,7 +74,7 @@ async function fetchProfessorDataFromAPI(profName) {
 
 async function fetchLatestVersionFromAPI() {
   try {
-    const response = await fetch('https://alpha216.github.io/BettertigerSchedule/api/newest', {
+    const response = await fetch('https://alpha216.github.io/Better_TS/api/newest', {
       cache: 'no-store'
     });
 
