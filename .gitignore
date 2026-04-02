@@ -49,3 +49,5 @@ logs
 .cache/
 .npm/
 .eslintcache
+
+/src
