@@ -8,6 +8,8 @@ const EXTENSION_VERSION = (() => {
 })();
 
 let updateBannerRendered = false;
+const instructorState = new WeakMap();
+let openProfessorPicker = null;
 
 async function fetchProfessorData(name) {
   return new Promise((resolve, reject) => {
@@ -32,20 +34,172 @@ async function fetchProfessorData(name) {
   });
 }
 
-function updateDiv(prof, div) {
-  const rating = prof.avgRating ?? 'N/A';
-  const difficulty = prof.avgDifficulty ?? 'N/A';
-  const originalInstructorText = div.textContent.trim();
-  const infoText = `${originalInstructorText} / R: ${rating} / D: ${difficulty} / W: ${Math.ceil(prof.wouldTakeAgainPercent) ?? 'N/A'}%`;
+function formatWouldTakeAgain(value) {
+  return typeof value === 'number' ? `${Math.ceil(value)}%` : 'N/A';
+}
 
+function createProfessorCandidate(prof) {
+  return {
+    firstName: prof.firstName || '',
+    lastName: prof.lastName || '',
+    department: prof.department || '',
+    difficulty: prof.avgDifficulty ?? 'N/A',
+    rating: prof.avgRating ?? 'N/A',
+    wouldTakeAgain: formatWouldTakeAgain(prof.wouldTakeAgainPercent),
+    courseTitles: prof.courseCodes?.map((item) => item.courseName) || [],
+    legacyId: prof.legacyId,
+  };
+}
+
+function createOriginalInstructorOption(instructorName) {
+  return {
+    firstName: instructorName,
+    lastName: '',
+    department: 'Use original instructor',
+    difficulty: null,
+    rating: null,
+    wouldTakeAgain: 'N/A',
+    courseTitles: [],
+    legacyId: null,
+    isOriginalInstructorOption: true,
+  };
+}
+
+function isProfessorMatch(instructorName, candidate) {
+  if (!candidate) {
+    return false;
+  }
+
+  const [last = '', first = ''] = instructorName.split(', ');
+  const normalizedInstructor = instructorName.toLowerCase().replace(/\s+/g, '');
+  const normalizedFirst = candidate.firstName.toLowerCase().replace(/\s+/g, '');
+  const normalizedLast = candidate.lastName.toLowerCase().replace(/\s+/g, '');
+
+  if (normalizedInstructor.includes(normalizedFirst) && normalizedInstructor.includes(normalizedLast)) {
+    return true;
+  }
+
+  return `${normalizedFirst}${normalizedLast}`.includes(first.toLowerCase().replace(/\s+/g, ''))
+    && `${normalizedFirst}${normalizedLast}`.includes(last.toLowerCase().replace(/\s+/g, ''));
+}
+
+function getRatingBackgroundColor(rating) {
+  if (typeof rating !== 'number') {
+    return 'transparent';
+  }
+  if (rating >= 4.0) {
+    return '#BAD8B6';
+  }
+  if (rating >= 3.0) {
+    return '#FBF3B9';
+  }
+  return '#ffa9a9';
+}
+
+function closeProfessorPicker() {
+  if (openProfessorPicker) {
+    openProfessorPicker.remove();
+    openProfessorPicker = null;
+  }
+}
+
+function renderProfessorPicker(div, state) {
+  closeProfessorPicker();
+
+  const picker = document.createElement('div');
+  picker.style.position = 'absolute';
+  picker.style.top = '100%';
+  picker.style.right = '0';
+  picker.style.marginTop = '6px';
+  picker.style.minWidth = '220px';
+  picker.style.backgroundColor = '#ffffff';
+  picker.style.border = '1px solid #cbd5e1';
+  picker.style.borderRadius = '8px';
+  picker.style.boxShadow = '0 10px 24px rgba(15, 23, 42, 0.18)';
+  picker.style.padding = '6px';
+  picker.style.zIndex = '9999';
+
+  state.candidates.forEach((candidate, index) => {
+    const option = document.createElement('div');
+    const displayName = candidate.isOriginalInstructorOption
+      ? candidate.firstName
+      : `${candidate.firstName} ${candidate.lastName}`.trim();
+    option.textContent = `${displayName} - ${candidate.department || 'Unknown department'}`;
+    option.style.padding = '8px 10px';
+    option.style.borderRadius = '6px';
+    option.style.cursor = 'pointer';
+    option.style.fontSize = '12px';
+    option.style.lineHeight = '1.4';
+    option.style.backgroundColor = index === state.selectedIndex ? '#e5e7eb' : 'transparent';
+
+    option.addEventListener('mouseenter', () => {
+      if (index !== state.selectedIndex) {
+        option.style.backgroundColor = '#f8fafc';
+      }
+    });
+
+    option.addEventListener('mouseleave', () => {
+      option.style.backgroundColor = index === state.selectedIndex ? '#e5e7eb' : 'transparent';
+    });
+
+    option.addEventListener('click', (event) => {
+      event.stopPropagation();
+      state.selectedIndex = index;
+      closeProfessorPicker();
+      renderInstructorRow(div);
+    });
+
+    picker.appendChild(option);
+  });
+
+  picker.addEventListener('click', (event) => {
+    event.stopPropagation();
+  });
+
+  div.appendChild(picker);
+  openProfessorPicker = picker;
+}
+
+function renderInstructorRow(div) {
+  const state = instructorState.get(div);
+  if (!state || !state.candidates[state.selectedIndex]) {
+    return;
+  }
+
+  const selectedProfessor = state.candidates[state.selectedIndex];
+  const infoText = selectedProfessor.isOriginalInstructorOption
+    ? state.originalInstructorText
+    : `${state.originalInstructorText} / R: ${selectedProfessor.rating} / D: ${selectedProfessor.difficulty} / W: ${selectedProfessor.wouldTakeAgain}`;
+
+  closeProfessorPicker();
   div.textContent = '';
+  div.dataset.rmpEnhanced = 'true';
   div.style.display = 'flex';
   div.style.alignItems = 'center';
+  div.style.justifyContent = 'space-between';
   div.style.gap = '8px';
+  div.style.position = 'relative';
+  div.style.cursor = 'default';
+
+  const textSpan = document.createElement('span');
+  textSpan.textContent = infoText;
+  textSpan.style.cursor = selectedProfessor.legacyId ? 'pointer' : 'default';
+  textSpan.style.backgroundColor = selectedProfessor.isOriginalInstructorOption
+    ? 'transparent'
+    : getRatingBackgroundColor(selectedProfessor.rating);
+  textSpan.style.padding = '2px 4px';
+  textSpan.style.borderRadius = '4px';
+  textSpan.style.flex = '1';
+
+  if (selectedProfessor.legacyId) {
+    textSpan.addEventListener('click', () => {
+      window.open(`https://www.ratemyprofessors.com/professor/${selectedProfessor.legacyId}`, '_blank');
+    });
+  }
 
   const infoIcon = document.createElement('div');
   infoIcon.textContent = 'ℹ';
-  infoIcon.setAttribute('aria-hidden', 'true');
+  infoIcon.setAttribute('aria-label', 'Show professor matches');
   infoIcon.style.color = '#1d4ed8';
   infoIcon.style.fontWeight = '700';
   infoIcon.style.fontSize = '16px';
@@ -53,34 +207,22 @@ function updateDiv(prof, div) {
   infoIcon.style.flexShrink = '0';
   infoIcon.style.cursor = 'pointer';
 
-  const textSpan = document.createElement('span');
-  textSpan.textContent = infoText;
-  textSpan.style.cursor = 'pointer';
+  infoIcon.addEventListener('click', (event) => {
+    event.stopPropagation();
+    if (openProfessorPicker && openProfessorPicker.parentElement === div) {
+      closeProfessorPicker();
+      return;
+    }
+    renderProfessorPicker(div, state);
+  });
 
-  div.appendChild(infoIcon);
   div.appendChild(textSpan);
-  if(prof.avgRating >= 4.0) {
-    textSpan.style.backgroundColor = '#BAD8B6';
-  }
-  else if(prof.avgRating >= 3.0) {
-    textSpan.style.backgroundColor = '#FBF3B9';
-  }
-  else if(prof.avgRating < 3.0) {
-    textSpan.style.backgroundColor = '#ffa9a9';
-  }
-  div.style.cursor = 'default';
-  textSpan.addEventListener('click', function() {
-    window.open('https://www.ratemyprofessors.com/professor/'+prof.legacyId, '_blank');
-  });
-  infoIcon.addEventListener('click', function() {
-
-  });
-};
+  div.appendChild(infoIcon);
+}
 
 const classes = [];
 
 async function findAllDivs() {
-
   // Finding classes
   classes.length = 0;
   for (const courseBox of document.querySelectorAll('div.course_box')) {
@@ -101,41 +243,24 @@ async function findAllDivs() {
 
   // Fetching professor data
   for (const { title, instructor, instructorElement } of classes) {
-
-    if (instructor.includes(' / R:')) continue; // If rate exist, Do not repeat
+    if (instructorElement?.dataset?.rmpEnhanced === 'true') continue;
     if (!instructor) continue; // If no instructor, skip
 
     try { // get professor data from RMP
       const res = await fetchProfessorData(instructor.replace(", ", " "));
 
-      for (const professorData of res) {
-        const prof = professorData.node;
+      const candidates = Array.isArray(res)
+        ? res.slice(0, 3).map((professorData) => professorData?.node).filter(Boolean).map(createProfessorCandidate)
+        : [];
 
-        const firstName = prof.firstName || '';
-        const lastName = prof.lastName || '';
-        const department = prof.department || '';
-
-        const difficulty = prof.avgDifficulty ?? 'N/A';
-        const rating = prof.avgRating ?? 'N/A';
-        const wouldTakeAgain = prof.wouldTakeAgainPercent ? `${Math.ceil(prof.wouldTakeAgainPercent)}%` : 'N/A';
-
-        const courseTitles = prof.courseCodes?.map(item => item.courseName) || [];
-      }
-  
-      const prof = res[0].node //Professor first data
-
-      const first = instructor.split(", ")[1]
-      const last = instructor.split(", ")[0]
-      if(!instructor.includes(prof.firstName) || !instructor.includes(prof.lastName)) {
-        if(!(prof.firstName + prof.lastName).includes(first) || !(prof.firstName + prof.lastName).includes(last)){
-          console.log('Name mismatch:', instructor, prof.firstName, prof.lastName);
-          // injectModals(instructorElement, res);
-          continue; // Skip if names do not match
-        }
-      }
-      if (prof) {
-        updateDiv(prof, instructorElement);
-      }
+      const selectedIndex = candidates.findIndex((candidate) => isProfessorMatch(instructor, candidate));
+      candidates.push(createOriginalInstructorOption(instructor));
+      instructorState.set(instructorElement, {
+        originalInstructorText: instructor,
+        candidates,
+        selectedIndex: selectedIndex >= 0 ? selectedIndex : candidates.length - 1,
+      });
+      renderInstructorRow(instructorElement);
     } catch (err) {
       console.error('Error fetching RMP data for', instructor, err);
     }
@@ -146,6 +271,10 @@ async function findAllDivs() {
 window.addEventListener('load', () => {
   setTimeout(findAllDivs, 1500);
   checkForExtensionUpdate();
+});
+
+document.addEventListener('click', () => {
+  closeProfessorPicker();
 });
 
 const legendBox = document.getElementById('legend_box');
