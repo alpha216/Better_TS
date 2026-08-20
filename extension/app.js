@@ -11,6 +11,14 @@ let updateBannerRendered = false;
 const instructorState = new WeakMap();
 let openProfessorPicker = null;
 
+async function getStorageData(key) {
+  return new Promise((resolve) => chrome.storage.local.get([key], (res) => resolve(res[key])));
+}
+
+async function setStorageData(key, value) {
+  return new Promise((resolve) => chrome.storage.local.set({ [key]: value }, resolve));
+}
+
 async function fetchProfessorData(name) {
   return new Promise((resolve, reject) => {
     chrome.runtime.sendMessage(
@@ -93,6 +101,9 @@ function getRatingBackgroundColor(rating) {
   if (rating >= 3.0) {
     return '#FBF3B9';
   }
+  if (rating == 0.0) {
+    return '#a9e7ffff';
+  }
   return '#ffa9a9';
 }
 
@@ -142,11 +153,14 @@ function renderProfessorPicker(div, state) {
       option.style.backgroundColor = index === state.selectedIndex ? '#e5e7eb' : 'transparent';
     });
 
-    option.addEventListener('click', (event) => {
+    option.addEventListener('click', async (event) => {
       event.stopPropagation();
       state.selectedIndex = index;
       closeProfessorPicker();
       renderInstructorRow(div);
+      if (state.cacheKey) {
+        await setStorageData(state.cacheKey, state);
+      }
     });
 
     picker.appendChild(option);
@@ -246,7 +260,17 @@ async function findAllDivs() {
     if (instructorElement?.dataset?.rmpEnhanced === 'true') continue;
     if (!instructor) continue; // If no instructor, skip
 
-    try { // get professor data from RMP
+    try {
+      const cacheKey = `rmp_${title}_${instructor}`;
+      const cachedState = await getStorageData(cacheKey);
+
+      if (cachedState) {
+        instructorState.set(instructorElement, cachedState);
+        renderInstructorRow(instructorElement);
+        continue;
+      }
+
+      // get professor data from RMP
       const res = await fetchProfessorData(instructor.replace(", ", " "));
 
       const candidates = Array.isArray(res)
@@ -255,11 +279,17 @@ async function findAllDivs() {
 
       const selectedIndex = candidates.findIndex((candidate) => isProfessorMatch(instructor, candidate));
       candidates.push(createOriginalInstructorOption(instructor));
-      instructorState.set(instructorElement, {
+
+      const state = {
+        cacheKey,
         originalInstructorText: instructor,
         candidates,
         selectedIndex: selectedIndex >= 0 ? selectedIndex : candidates.length - 1,
-      });
+      };
+
+      instructorState.set(instructorElement, state);
+      await setStorageData(cacheKey, state);
+
       renderInstructorRow(instructorElement);
     } catch (err) {
       console.error('Error fetching RMP data for', instructor, err);
@@ -285,15 +315,15 @@ let observer = new MutationObserver(() => {
 });
 
 observer.observe(legendBox, {
-        attributes: true,          
-        attributeOldValue: true,  
+  attributes: true,
+  attributeOldValue: true,
 
-        childList: true,           
+  childList: true,
 
-        // subtree: true,             
+  // subtree: true,             
 
-        characterData: true,       
-        characterDataOldValue: true 
+  characterData: true,
+  characterDataOldValue: true
 });
 
 function requestLatestExtensionVersion() {
